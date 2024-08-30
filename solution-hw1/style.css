@@ -1,0 +1,55 @@
+#logo{
+    width: 400px;
+   }
+
+
+#navigation_products{
+    background-color: yellow;
+   }
+
+#pg_productGalleryHeader{
+    font-size: 20px;
+}
+
+
+.pg_productOverview{
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+    text-align: left;
+}
+
+.pg_productPhoto{
+    border-style: solid;
+    border-color: black;
+    border-width: 3;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2px;
+   }
+
+.pg_productName {
+    font-size: 16px;
+    text-decoration: underline;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.pg_productPrice {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-top: 0px;
+    line-height: 1;
+}
+
+.pg_productOverview:hover {
+    transform: scale(1.05);
+    background-color: yellow;
+    padding-bottom: 0px;
+    margin-bottom: 0px
+}
+
+.example{
+    color: rgb(183, 30, 30);
+   }

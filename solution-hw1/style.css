@@ -1,19 +1,61 @@
-#logo{
-    width: 400px;
-   }
+/* HEADER STYLE ELEMENTS */
 
+#logo{
+    display: flex;
+}
+
+#logo{
+    max-width: 400px;
+}
+
+.header_pageBreak{
+    /*to be updated*/
+}
+
+/* NAVIGATION STYLE ELEMENTS */
+.navigation{
+    display: flex;
+    flex-direction: column;
+    max-width:max-content;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0.5;
+    
+}
 
 #navigation_products{
     background-color: yellow;
+    font-size: 20px;
    }
 
-#pg_productGalleryHeader{
+#navigation_cart{
     font-size: 20px;
+   }
+
+/* BODY STYLE ELEMENTS */
+
+.pg_productGalleryBody{
+    /*background: red; I used this to help understand flexbox*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pg_productGalleryHeader{
+    /*border-style: solid;
+    border-color: black; I used these lines to help understand flexbox*/
+    font-size: 24px;
+    font-weight: 10;
+    max-width:max-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 .pg_productOverview{
-    width: 300px;
+    max-width: 300px;
     padding: 5px;
     margin: 10px;
     text-align: left;
@@ -22,7 +64,7 @@
 .pg_productPhoto{
     border-style: solid;
     border-color: black;
-    border-width: 3;
+    border-width: 2px;
     width: 100%;
     height: auto;
     margin-bottom: 2px;
@@ -49,7 +91,3 @@
     padding-bottom: 0px;
     margin-bottom: 0px
 }
-
-.example{
-    color: rgb(183, 30, 30);
-   }

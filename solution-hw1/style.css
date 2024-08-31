@@ -43,6 +43,17 @@
     background-color: yellow;
     font-size: 20px;
    }
+
+#pd_navigation_products{
+    font-weight: bold;
+    background-color: yellow;
+    font-size: 20px;
+   }
+
+#pd_navigation_cart{
+    font-size: 20px;
+   }
+
 /* BODY STYLE ELEMENTS_Product Gallery page only */
 
 .pg_body{
@@ -200,7 +211,7 @@
     max-width: 100%;
 }
 
-.button_checkout {
+.cart_button_checkout {
     display: inline-block;
     width: 140px;
     padding: 10px;
@@ -214,6 +225,111 @@
     transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out; /*found this on stack-overflow to help make button color change less jarring*/
 }
 
-.button_checkout:hover {
+.cart_button_checkout:hover {
+    background-color: yellow;
+}
+
+
+/* BODY STYLE ELEMENTS_Product Detail page only */
+
+.pd_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pd_header{
+    /*border-style: solid;
+    border-color: black; I used these lines to help understand flexbox*/
+    font-size: 30px;
+    font-weight: 1px;
+    max-width:max-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pd_productDetails{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 5px;
+    margin: 10px;
+    align-items:center;
+    /*background-color: blue;*/
+}
+
+.pd_productPhoto{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2px;
+   }
+
+.pd_CTA {
+    /*border: solid black;*/
+    width: 100%;
+    font-size: 22px;
+    font-weight: 1px;
+    margin-bottom: 50px
+    
+}
+
+.pd_customizationSection {
+    margin-top: 10px;
+    width: 260px;
+    /*border: solid black*/
+}
+
+.pd_customization {
+    /*border: dotted black;*/
+    width: 100%
+}
+
+.pd_customization_text {
+    font-size: 22px;
+    /*border: solid red;*/
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.pd_dropdown {
+    font-size: 20px;
+    padding: 5px 10px;
+    /*border: solid red;*/
+    width: 100%
+}
+
+.pd_itemTotal {
+    display: flex;
+    justify-content: space-between;
+    /*border: solid red;*/
+    width: 100%;
+    height: 50px;
+    margin-top: 60px
+}
+
+
+.pd_itemTotal_price {
+    /*border: solid black;*/
+    font-size: 18px;
+    margin: auto;
+    width: fit-content;
+    height:fit-content;
+    /*line-height: 1;*/
+}
+
+.pd_button_addToCart {
+    width: 160px;
+    font-size: 18px;
+    margin: 2px;
+    /*padding: 5px 20px;*/
+    /*line-height: 1;*/
+    transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out; /*found this on stack-overflow to help make button color change less jarring*/
+}
+
+.pd_button_addToCart:hover {
     background-color: yellow;
 }

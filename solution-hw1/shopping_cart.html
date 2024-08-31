@@ -2,14 +2,52 @@
 <html lang="en">
   <meta charset="UTF-8">
   <title>Bun Bun Shopping Cart</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
   
   <body>
 
-    <h1>Other Page</h1>
+    <div class="header" >
+      <img id="logo" src="../assets/logo/logo-01.svg" alt="Bun Bun company logo">
+      <hr class="header_pageBreak">
+    </div>
 
-    <p>
-        Hello!
-    </p>
+    <div class="cart_body">
+
+      <div class="navigation" >
+        <p> <span id="cart_navigation_products"> PRODUCTS </span> </p>
+        <p> <span id="cart_navigation_cart"> CART </span> </p>
+      </div>
+
+      <div class="cart_body" >
+        <p id="cart_header"> Shopping Cart </p>
+        
+        <div class="cart_productOverview" id="cart_original">
+          <img class="cart_productPhoto" id="cart_productPhoto_original" src="../assets/products/original-cinnamon-roll.jpg" alt="Image of original cinnamon role">
+          <p class="cart_removeButton" > Remove </p>
+          <p class="cart_productName" id="cart_productName_original"> Original Cinnamon Roll </p>
+          <p class="cart_productGlazing" id="cart_productGlazing_original"> Glazing: Keep original </p>
+          <p class="cart_productPackSize" id="cart_productPackSize_original"> Pack Size: 1 </p>
+          <p class="cart_productPrice" id="cart_productPrice_original"> $ 2.49 </p>
+        </div>
+
+        <div class="cart_productOverview" id="cart_DoubleChocolateCinnamon">
+          <img class="cart_productPhoto" id="cart_productPhoto_DoubleChocolateCinnamon" src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Image of original cinnamon role">
+          <p class="cart_removeButton" > Remove </p>
+          <p class="cart_productName" id="cart_productName_DoubleChocolateCinnamon"> Double Chocolate Cinnamon Roll </p>
+          <p class="cart_productGlazing" id="cart_productGlazing_DoubleChocolateCinnamon"> Glazing: Sugar milk </p>
+          <p class="cart_productPackSize" id="cart_productPackSize_DoubleChocolateCinnamon"> Pack Size: 6 </p>
+          <p class="cart_productPrice" id="cart_productPrice_DoubleChocolateCinnamon"> $ 27.45 </p>
+        </div>
+
+      </div> 
+    </div>
+    
+    <div class="cart_footer" >
+        <hr class="cart_footer_pageBreak">
+        <p class="cart_total"> Total: $ 29.94 </p>
+        <button class="button_checkout"> Checkout </button>
+    </div>
 
   </body>
-</html>
+
+  </html>

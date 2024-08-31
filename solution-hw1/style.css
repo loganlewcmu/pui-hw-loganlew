@@ -1,4 +1,4 @@
-/* HEADER STYLE ELEMENTS */
+/* HEADER STYLE ELEMENTS_Applies to all pages */
 
 #logo{
     display: flex;
@@ -9,11 +9,11 @@
 }
 
 .header_pageBreak{
-    /*to be updated*/
+    border-top: 5px solid black;
 }
 
 /* NAVIGATION STYLE ELEMENTS */
-.navigation{
+.navigation{ /*all pages*/
     display: flex;
     flex-direction: column;
     max-width:max-content;
@@ -24,25 +24,34 @@
     
 }
 
-#navigation_products{
+#pg_navigation_products{
+    font-weight: bold;
     background-color: yellow;
     font-size: 20px;
    }
 
-#navigation_cart{
+#pg_navigation_cart{
     font-size: 20px;
    }
 
-/* BODY STYLE ELEMENTS */
+#cart_navigation_products{
+    font-size: 20px;
+   }
 
-.pg_productGalleryBody{
-    /*background: red; I used this to help understand flexbox*/
+#cart_navigation_cart{
+    font-weight: bold;
+    background-color: yellow;
+    font-size: 20px;
+   }
+/* BODY STYLE ELEMENTS_Product Gallery page only */
+
+.pg_body{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#pg_productGalleryHeader{
+#pg_header{
     /*border-style: solid;
     border-color: black; I used these lines to help understand flexbox*/
     font-size: 24px;
@@ -59,6 +68,7 @@
     padding: 5px;
     margin: 10px;
     text-align: left;
+    transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out; /*found this on stack-overflow to help make button color change less jarring*/
 }
 
 .pg_productPhoto{
@@ -89,5 +99,121 @@
     transform: scale(1.05);
     background-color: yellow;
     padding-bottom: 0px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
+}
+
+/* BODY STYLE ELEMENTS_Shopping cart page only */
+
+.cart_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cart_header{
+    /*border-style: solid;
+    border-color: black; I used these lines to help understand flexbox*/
+    font-size: 30px;
+    font-weight: 1px;
+    max-width:max-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.cart_productOverview{
+    width: 400px;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart_productPhoto{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 2px;
+   }
+
+.cart_removeButton {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 0;
+}
+
+   
+.cart_productName {
+    font-size: 26px;
+    max-width: 100%;
+    margin-top: 5px;
+    line-height: 0;
+}
+
+.cart_productGlazing {
+    font-size: 26px;
+    max-width: 100%;
+    margin-top: 0px;
+    line-height: 0;
+}
+
+.cart_productPackSize {
+    font-size: 26px;
+    max-width: 100%;
+    margin-top: 0px;
+    line-height: 0;
+}
+
+.cart_productPrice {
+    font-size: 26px;
+    max-width: 100%;
+    margin-top: 0px;
+    margin-top: 0px;
+    line-height: 2;
+}
+
+
+/* FOOTER STYLE ELEMENTS_Shopping cart page only */
+
+.cart_footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart_footer_pageBreak {
+    border-top: 5px solid black;
+    width: 67%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px
+}
+
+.cart_total {
+    font-size: 26px;
+    max-width: 100%;
+}
+
+.button_checkout {
+    display: inline-block;
+    width: 140px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out; /*found this on stack-overflow to help make button color change less jarring*/
+}
+
+.button_checkout:hover {
+    background-color: yellow;
 }

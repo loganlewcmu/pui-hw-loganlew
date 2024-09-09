@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: `https://loganlewcmu.github.io/pui-hw-loganlew/`
 
-Repository link: `add the URL to this repository`
+Repository link: `https://github.com/loganlewcmu/pui-hw-loganlew`

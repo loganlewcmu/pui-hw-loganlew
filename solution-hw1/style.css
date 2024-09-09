@@ -1,3 +1,4 @@
+/* OVERRIDING DEFAULT LINK SETTINGS */
 a {
     text-decoration: none;
     color: black
@@ -12,99 +13,90 @@ a:hover {
     text-decoration: none;
 }
 
-/* HEADER STYLE ELEMENTS_Applies to all pages */
 
-#logo{
+/* HEADER STYLE ELEMENTS (Applies to all pages) */
+
+#logo {
     display: flex;
 }
 
-#logo{
+#logo {
     max-width: 400px;
 }
 
-.header_pageBreak{
+.header_pageBreak {
     border-top: 5px solid black;
 }
 
-/* NAVIGATION STYLE ELEMENTS */
+/* NAVIGATION STYLE ELEMENTS (applies to all pages) */
 
-.navigation{ /*all pages*/
+.navigation {
     display: flex;
     flex-direction: column;
-    max-width:max-content;
+    max-width: max-content;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
     line-height: 0.5;
-    
+
 }
 
-#pg_navigation_products{
+
+#navigation_products,
+#navigation_cart {
+    font-size: 20px;
+}
+
+#navigation_products:hover {
+    font-size: 20px;
     font-weight: bold;
     background-color: yellow;
-    font-size: 20px;
-   }
+}
 
-#pg_navigation_cart{
+#navigation_cart:hover {
     font-size: 20px;
-   }
-
-#cart_navigation_products{
-    font-size: 20px;
-   }
-
-#cart_navigation_cart{
     font-weight: bold;
     background-color: yellow;
-    font-size: 20px;
-   }
+}
 
-#pd_navigation_products{
-    font-weight: bold;
-    background-color: yellow;
-    font-size: 20px;
-   }
 
-#pd_navigation_cart{
-    font-size: 20px;
-   }
+/* BODY STYLE ELEMENTS (Product Gallery page only) */
 
-/* BODY STYLE ELEMENTS_Product Gallery page only */
-
-.pg_body{
+.pg_body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#pg_header{
+#pg_header {
     /*border-style: solid;
     border-color: black; I used these lines to help understand flexbox*/
     font-size: 24px;
-    font-weight: 10;
-    max-width:max-content;
+    max-width: max-content;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
 
-.pg_productOverview{
+.pg_productOverview {
     max-width: 300px;
     padding: 5px;
     margin: 10px;
     text-align: left;
-    transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out; /*found this on stack-overflow to help make button color change less jarring*/
+    transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out;
+    /*found this on stack-overflow to help make button color change less jarring*/
 }
 
-.pg_productPhoto{
+.pg_productPhoto {
     border-style: solid;
     border-color: black;
     border-width: 2px;
     width: 100%;
     height: auto;
     margin-bottom: 2px;
-   }
+}
 
 .pg_productName {
     font-size: 16px;
@@ -112,6 +104,10 @@ a:hover {
     margin-top: 0px;
     margin-bottom: 2px;
     line-height: 1;
+}
+
+.pg_productOverview:hover .pg_productName {
+    font-weight: bold;
 }
 
 .pg_productPrice {
@@ -122,33 +118,33 @@ a:hover {
 }
 
 .pg_productOverview:hover {
-    transform: scale(1.05);
     background-color: yellow;
     padding-bottom: 0px;
     margin-bottom: 0px;
+    transform: scale(1.05); /*found this line on stack overflow to make formatting changes on hover more agreeable*/
+    z-index: 1; /*found this line on stack overflow to make formatting changes on hover more agreeable*/
 }
 
-/* BODY STYLE ELEMENTS_Shopping cart page only */
+/* BODY STYLE ELEMENTS (Shopping cart page only) */
 
-.cart_body{
+.cart_body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#cart_header{
+#cart_header {
     /*border-style: solid;
     border-color: black; I used these lines to help understand flexbox*/
-    font-size: 30px;
-    font-weight: 1px;
-    max-width:max-content;
+    font-size: 24px;
+    max-width: max-content;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
 
-.cart_productOverview{
+.cart_productOverview {
     width: 400px;
     padding: 5px;
     margin: 10px;
@@ -157,14 +153,14 @@ a:hover {
     align-items: center;
 }
 
-.cart_productPhoto{
+.cart_productPhoto {
     border-style: solid;
     border-color: black;
     border-width: 2px;
     max-width: 200px;
     height: auto;
     margin-bottom: 2px;
-   }
+}
 
 .cart_removeButton {
     font-size: 14px;
@@ -173,7 +169,7 @@ a:hover {
     line-height: 0;
 }
 
-   
+
 .cart_productName {
     font-size: 26px;
     max-width: 100%;
@@ -204,9 +200,9 @@ a:hover {
 }
 
 
-/* FOOTER STYLE ELEMENTS_Shopping cart page only */
+/* FOOTER STYLE ELEMENTS (Shopping cart page only) */
 
-.cart_footer{
+.cart_footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -245,43 +241,42 @@ a:hover {
 }
 
 
-/* BODY STYLE ELEMENTS_Product Detail page only */
+/* BODY STYLE ELEMENTS (Product Detail page only) */
 
-.pd_body{
+.pd_body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#pd_header{
+#pd_header {
     /*border-style: solid;
     border-color: black; I used these lines to help understand flexbox*/
-    font-size: 30px;
-    font-weight: 1px;
-    max-width:max-content;
+    font-size: 24px;
+    max-width: max-content;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-.pd_productDetails{
+.pd_productDetails {
     display: flex;
     flex-direction: column;
     max-width: 600px;
     padding: 5px;
     margin: 10px;
-    align-items:center;
+    align-items: center;
     /*background-color: blue;*/
 }
 
-.pd_productPhoto{
+.pd_productPhoto {
     border-style: solid;
     border-color: black;
     border-width: 2px;
     width: 100%;
     height: auto;
     margin-bottom: 2px;
-   }
+}
 
 .pd_CTA {
     /*border: solid black;*/
@@ -289,7 +284,6 @@ a:hover {
     font-size: 22px;
     font-weight: 1px;
     margin-bottom: 50px
-    
 }
 
 .pd_customizationSection {
@@ -332,7 +326,7 @@ a:hover {
     font-size: 18px;
     margin: auto;
     width: fit-content;
-    height:fit-content;
+    height: fit-content;
     /*line-height: 1;*/
 }
 
@@ -342,7 +336,8 @@ a:hover {
     margin: 2px;
     /*padding: 5px 20px;*/
     /*line-height: 1;*/
-    transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out; /*found this on stack-overflow to help make button color change less jarring*/
+    transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out;
+    /*found this on stack-overflow to help make button color change less jarring*/
 }
 
 .pd_button_addToCart:hover {

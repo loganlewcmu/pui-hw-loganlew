@@ -1,0 +1,77 @@
+Product-detail
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Bun Bun Product detail page</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<body>
+
+    <div class="header">
+        <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw1/">
+            <img id="logo"
+                src="https://raw.githubusercontent.com/loganlewcmu/pui-hw-loganlew/0296ee21081084e1326cda38ee059eb96355de83/assets/logo/logo-01.svg"
+                alt="Bun Bun company logo">
+        </a>
+        <hr class="header_pageBreak">
+    </div>
+
+    <div class="pd_body">
+
+        <nav class="navigation">
+            <p> <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw1/"> <span id="navigation_products">
+                        PRODUCTS </span> </a>
+            </p>
+            <p> <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw1/shopping_cart.html"> <span
+                        id="navigation_cart"> CART </span> </p> </a>
+        </nav>
+
+        <div class="pd_productList">
+            <p id="pd_header"> Original cinnamon roll </p>
+
+            <div class="pd_productDetails" id="pd_original">
+                <img class="pd_productPhoto" id="pd_productPhoto_original"
+                    src="https://github.com/loganlewcmu/pui-hw-loganlew/blob/main/assets/products/original-cinnamon-roll.jpg?raw=true"
+                    alt="Image of cinnamon role">
+
+                <div class="pd_customizationSection">
+                    <p class="pd_CTA"> Customize our delicious, hand-made cinnamol roll to your liking! </p>
+                    <div class="pd_customization" id="pd_customization_glazing">
+                        <p class="pd_customization_text" id="pd_customization_text_glazing"> Glazing: </p>
+                        <select class="pd_dropdown" id="pd_dropdown_glazing">
+                            <option value="dropdownOptions_glazing_keepOriginal">Keep original</option>
+                            <option value="dropdownOptions_glazing_sugarMilk">Sugar milk</option>
+                            <option value="dropdownOptions_glazing_vanillaMilk">Vanilla milk</option>
+                            <option value="dropdownOptions_glazing_doubleChocolate">Double chocolate</option>
+                        </select>
+                    </div>
+
+                    <div class="pd_customization" id="pd_customization_packSize">
+                        <p class="pd_customization_text" id="pd_customization_text_packSize"> Pack size: </p>
+                        <select class="pd_dropdown" id="pd_dropdown_packSize">
+                            <option value="dropdownOptions_packSize_1">1</option>
+                            <option value="dropdownOptions_packSize_3">3</option>
+                            <option value="dropdownOptions_packSize_6">6</option>
+                            <option value="dropdownOptions_packSize_12">12</option>
+                        </select>
+                    </div>
+
+                    <div class="pd_itemTotal">
+                        <p class="pd_itemTotal_price"> $ 2.49 </p>
+                        <button class="pd_button_addToCart"> Add to Cart </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

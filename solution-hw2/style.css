@@ -23,7 +23,8 @@ a:hover {
     height:max-content;
     display: flex;
     align-items:stretch;
-    gap: 20px
+    gap: 20px;
+    /*border: solid red;*/
 }
 
 
@@ -102,7 +103,7 @@ a:hover {
     margin-bottom: 5px;
     margin-top:0px;
     position: absolute;
-    bottom: 10%
+    bottom: 10%;
 }
 
 /* BODY STYLE ELEMENTS (Product Gallery page only) */
@@ -277,12 +278,6 @@ a:hover {
 
 /* BODY STYLE ELEMENTS (Product Detail page only) */
 
-.pd_body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #pd_header {
     /*border-style: solid;
     border-color: black; I used these lines to help understand flexbox*/
@@ -295,70 +290,97 @@ a:hover {
 
 .pd_productDetails {
     display: flex;
-    flex-direction: column;
-    max-width: 600px;
+    flex-direction: row;
+    align-content: center;
+    width: 100%;
     padding: 5px;
     margin: 10px;
-    align-items: center;
-    /*background-color: blue;*/
+    /*border: solid blue;*/
 }
 
 .pd_productPhoto {
     border-style: solid;
     border-color: black;
-    border-width: 2px;
-    width: 100%;
+    border-width: 3px;
+    width: 600px;
     height: auto;
     margin-bottom: 2px;
+    margin-left: auto;
+}
+
+.pd_customizationSection {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    /*border: solid black;*/
+    padding-right: 80px;
 }
 
 .pd_CTA {
     /*border: solid black;*/
-    width: 100%;
-    font-size: 22px;
-    font-weight: 1px;
+    max-width: 280px;
+    font-size: 24px;
+    margin-top: 20px;
     margin-bottom: 50px
+    
 }
 
-.pd_customizationSection {
-    margin-top: 10px;
+.pd_dropdownSection{
     width: 260px;
-    /*border: solid black*/
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-items:center;
+    gap: 15px;
+    /*border:solid maroon;*/
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    margin-left:0px;
 }
 
 .pd_customization {
-    /*border: dotted black;*/
-    width: 100%
+    /*border: solid red;*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
 }
 
 .pd_customization_text {
-    font-size: 22px;
+    font-size: 24px;
     /*border: solid red;*/
     margin-bottom: 2px;
     line-height: 1;
 }
 
 .pd_dropdown {
-    font-size: 20px;
+    font-size: 22px;
     padding: 5px 10px;
     /*border: solid red;*/
-    width: 100%
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
 }
 
 .pd_itemTotal {
+    width: 260px;
     display: flex;
     justify-content: space-between;
     /*border: solid red;*/
-    width: 100%;
     height: 50px;
-    margin-top: 60px
+    margin-top: 60px;
+    margin-left: 0px;
+    
 }
 
 
 .pd_itemTotal_price {
     /*border: solid black;*/
     font-size: 18px;
-    margin: auto;
+    font-weight: bold;
+    margin-left: 0px;
     width: fit-content;
     height: fit-content;
     /*line-height: 1;*/

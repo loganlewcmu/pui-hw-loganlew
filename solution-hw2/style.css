@@ -2,7 +2,7 @@ Css
 
 /* OVERRIDING DEFAULT LINK SETTINGS */
 a {
-    text-decoration: none;
+    
     color: black;
 }
 
@@ -19,7 +19,7 @@ a:hover {
 /* HEADER STYLE ELEMENTS (Applies to all pages) */
 
 .header{
-    /*border: solid black;*/
+    /*border: solid green;*/
     height:max-content;
     display: flex;
     align-items:stretch;
@@ -28,8 +28,10 @@ a:hover {
 
 
 #logo {
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
+    padding: 10px;
+    /*border: solid black*/
 }
 
 .header_nav_divider_title{
@@ -56,14 +58,19 @@ a:hover {
 .navigation {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     text-decoration: none;
-    /*border: solid blue;*/
+    border: solid red;
+    height: 40%;
+    margin-right:20px
 }
 
 .navigation_button{
+    /*border: solid blue;*/
     font-size: 22px;
-    margin: 30px;
-    text-decoration: none;
+    margin: 50px 30px 30px 30px; 
+    text-decoration:none !important;
+    border-bottom: none!important;
 }
 
 .navigation_button:hover{
@@ -72,14 +79,29 @@ a:hover {
     background-color: yellow;
 }
 
+.navigation_button,
+.navigation_button:link,
+.navigation_button:visited,
+.navigation_button:hover,
+.navigation_button:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/*
+* {
+    text-decoration: none !important;
+} /*got this from stack-overflow because browsers style was overriding my styling*/
 
 .page_header{
     /*border: solid blue;*/
-    font-size: 26px;
+    font-size: 30px;
     max-width: 100%;
     text-align: left;
     margin-bottom: 5px;
-    margin-top:0px
+    margin-top:0px;
+    position: absolute;
+    bottom: 10%
 }
 
 /* BODY STYLE ELEMENTS (Product Gallery page only) */

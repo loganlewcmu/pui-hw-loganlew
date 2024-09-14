@@ -28,9 +28,10 @@ a:hover {
 
 
 #logo {
-    max-width: 350px;
+    max-width: 400px;
     height: auto;
     padding: 10px;
+    margin: 8px;
     /*border: solid black*/
 }
 
@@ -60,7 +61,7 @@ a:hover {
     justify-content: flex-end;
     align-items: center;
     text-decoration: none;
-    border: solid red;
+    /*border: solid red;*/
     height: 40%;
     margin-right:20px
 }
@@ -108,19 +109,24 @@ a:hover {
 
 .pg_body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left:50px;
+    margin-right:50px;
+    /*border: solid blue*/
 }
 
-
-
 .pg_productOverview {
-    max-width: 300px;
+    max-width: 285px;
     padding: 5px;
     margin: 10px;
     text-align: left;
-    transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out;
-    /*found this on stack-overflow to help make button color change less jarring*/
+    transition: background-color 0.15s ease-in-out; /*found this on stack-overflow to help make button color change less jarring*/
+    /*border: solid black*/
+}
+
+.pg_productOverview:hover {
+    background-color: yellow;
 }
 
 .pg_productPhoto {
@@ -151,15 +157,6 @@ a:hover {
     line-height: 1;
 }
 
-.pg_productOverview:hover {
-    background-color: yellow;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    transform: scale(1.05);
-    /*found this line on stack overflow to make formatting changes on hover more agreeable*/
-    z-index: 1;
-    /*found this line on stack overflow to make formatting changes on hover more agreeable*/
-}
 
 /* BODY STYLE ELEMENTS (Shopping cart page only) */
 

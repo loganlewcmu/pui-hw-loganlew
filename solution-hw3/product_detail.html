@@ -8,11 +8,7 @@
 <body>
 
     <div class="header">
-        <!--<a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw3/index.html">
-            <img id="logo"
-            src="https://raw.githubusercontent.com/loganlewcmu/pui-hw-loganlew/0296ee21081084e1326cda38ee059eb96355de83/assets/logo/logo-01.svg"
-            alt="Bun Bun company logo">
-        </a>-->
+
 
         <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw3/index.html">
             <img id="logo"
@@ -49,27 +45,19 @@
             <div class="pd_dropdownSection">
                 <div class="pd_customization" id="pd_customization_glazing">
                     <p class="pd_customization_text" id="pd_customization_text_glazing"> Glazing: </p>
-                    <select class="pd_dropdown" id="pd_dropdown_glazing">
-                        <option value="dropdownOptions_glazing_keepOriginal">Keep original</option>
-                        <option value="dropdownOptions_glazing_sugarMilk">Sugar milk</option>
-                        <option value="dropdownOptions_glazing_vanillaMilk">Vanilla milk</option>
-                        <option value="dropdownOptions_glazing_doubleChocolate">Double chocolate</option>
+                    <select class="pd_dropdown" id="pd_dropdown_glazing" onchange="glazingChange(this)">
                     </select>
                 </div>
 
                 <div class="pd_customization" id="pd_customization_packSize">
                     <p class="pd_customization_text" id="pd_customization_text_packSize"> Pack size: </p>
-                    <select class="pd_dropdown" id="pd_dropdown_packSize">
-                        <option value="dropdownOptions_packSize_1">1</option>
-                        <option value="dropdownOptions_packSize_3">3</option>
-                        <option value="dropdownOptions_packSize_6">6</option>
-                        <option value="dropdownOptions_packSize_12">12</option>
+                    <select class="pd_dropdown" id="pd_dropdown_packSize" onchange="packSizeChange(this)">
                     </select>
                 </div>
             </div>
 
             <div class="pd_itemTotal">
-                <p class="pd_itemTotal_price"> $ 2.49 </p>
+                <p id="pd_itemTotal_price"> $ 2.49 </p>
                 <button class="pd_button_addToCart"> Add to Cart </button>
             </div>
         </div>
@@ -78,6 +66,7 @@
 
     </div>
 
+    <script src="app.js"></script>
 
 </body>
 

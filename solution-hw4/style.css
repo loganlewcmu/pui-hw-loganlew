@@ -7,8 +7,8 @@
 
 /* OVERRIDING DEFAULT LINK SETTINGS */
 a {
-    text-decoration:none !important;
-    border-bottom: none!important;
+    text-decoration: none !important;
+    border-bottom: none !important;
     color: black;
 }
 
@@ -24,13 +24,12 @@ a:hover {
 
 /* HEADER STYLE ELEMENTS (Applies to all pages) */
 
-.header{
-    /*border: solid green;*/
-    height:max-content;
+.header {
+    height: max-content;
     display: flex;
-    align-items:stretch;
+    align-items: stretch;
     gap: 20px;
-    /*border: solid red;*/
+
 }
 
 
@@ -39,11 +38,9 @@ a:hover {
     height: auto;
     padding: 10px;
     margin: 8px;
-    /*border: solid black*/
 }
 
-.header_nav_divider_title{
-    /*border: solid red;*/
+.header_nav_divider_title {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -51,7 +48,6 @@ a:hover {
     box-sizing: border-box;
     justify-content: space-between;
     position: relative
-    
 }
 
 .header_pageBreak {
@@ -68,21 +64,19 @@ a:hover {
     justify-content: flex-end;
     align-items: center;
     text-decoration: none;
-    /*border: solid red;*/
     height: 40%;
-    margin-right:20px
+    margin-right: 20px
 }
 
-.navigation_button{
-    /*border: solid blue;*/
+.navigation_button {
     font-family: Arial, sans-serif;
     font-size: 22px;
-    margin: 50px 30px 30px 30px; 
-    text-decoration:none !important;
-    border-bottom: none!important;
+    margin: 50px 30px 30px 30px;
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 
-.navigation_button:hover{
+.navigation_button:hover {
     font-size: 22px;
     font-weight: bold;
     background-color: yellow;
@@ -102,13 +96,12 @@ a:hover {
     text-decoration: none !important;
 } /*got this from stack-overflow because browsers style was overriding my styling*/
 
-.page_header{
-    /*border: solid blue;*/
+.page_header {
     font-size: 30px;
     max-width: 100%;
     text-align: left;
     margin-bottom: 5px;
-    margin-top:0px;
+    margin-top: 0px;
     position: absolute;
     bottom: 10%;
 }
@@ -120,18 +113,18 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 50px;
-    margin-left:50px;
-    margin-right:50px;
-    /*border: solid blue*/
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .pg_productOverview {
     max-width: 285px;
     padding: 5px;
+    padding-bottom: 0px;
     margin: 10px;
     text-align: left;
-    transition: background-color 0.15s ease-in-out; /*found this on stack-overflow to help make button color change less jarring*/
-    /*border: solid black*/
+    transition: background-color 0.15s ease-in-out;
+    /*found this on stack-overflow to help make button color change less jarring*/
 }
 
 .pg_productOverview:hover {
@@ -162,10 +155,12 @@ a:hover {
 .pg_productPrice {
     margin-top: 0px;
     margin-top: 0px;
+    margin-bottom: 0px;
     line-height: 1;
 }
 
-.pg_productName, .pg_productPrice{
+.pg_productName,
+.pg_productPrice {
     font-size: 18px;
 }
 
@@ -176,16 +171,14 @@ a:hover {
     max-width: 850px;
     margin-top: 50px;
     margin-left: 30%;
-    margin-right:8%;
+    margin-right: 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid red;
 }
 
 
 .cart_productOverview {
-    border: solid green;
     width: 100%;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -195,12 +188,11 @@ a:hover {
 }
 
 .left_box {
-   border: solid blue;
     display: flex;
     flex-direction: column;
 }
 
-.cart_productPhoto{
+.cart_productPhoto {
     width: 220px;
     height: auto;
     border-style: solid;
@@ -208,27 +200,24 @@ a:hover {
     border-width: 3px;
 }
 
-.cart_removeButton{
+.cart_removeButton {
     font-size: 26px;
     font-weight: bold;
     text-decoration: underline;
-    border: solid black;
     margin-bottom: 10px
 }
 
 .right_box {
     position: relative;
-    margin-top:-90px;
-    border: dotted blue;
+    margin-top: -90px;
     width: 100%;
     margin-left: 20px;
     display: flex;
-    align-items:center;
-    
+    align-items: center;
+
 }
 
 .right_box_options {
-    /*border: solid red;*/
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -237,7 +226,6 @@ a:hover {
 .cart_productName,
 .cart_productGlazing,
 .cart_productPackSize {
-    /*border: solid black;*/
     font-size: 26px;
     font-weight: 40;
     max-width: 100%;
@@ -246,12 +234,11 @@ a:hover {
     padding: 0
 }
 
-.cart_productName{
-    text-decoration:none !important
+.cart_productName {
+    text-decoration: none !important
 }
 
 .cart_productPrice {
-    border: dotted red;
     margin-left: auto;
     max-width: 100%;
 }
@@ -276,29 +263,27 @@ a:hover {
     border-top: 5px solid black;
 }
 
-.container_total{
+.container_total {
     display: flex;
-    border: solid orange;
     justify-content: flex-end;
 }
 
-.total_text{
-    border: solid black;
+.total_text {
     font-size: 26px;
     width: 60%
 }
 
-.total_amount{
-    border: solid black;
+.total_amount {
     font-size: 26px;
 }
 
-.button_wrapper{
+.button_wrapper {
     display: flex;
-    width:100%
+    width: 100%
 }
+
 .cart_button_checkout {
-    margin-left:auto;
+    margin-left: auto;
     display: inline-block;
     width: 140px;
     padding: 10px;
@@ -321,8 +306,6 @@ a:hover {
 /* BODY STYLE ELEMENTS (Product Detail page only) */
 
 #pd_header {
-    /*border-style: solid;
-    border-color: black; I used these lines to help understand flexbox*/
     font-size: 24px;
     max-width: max-content;
     text-align: center;
@@ -340,7 +323,6 @@ a:hover {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    /*border: solid blue;*/
 }
 
 .pd_productPhoto {
@@ -357,35 +339,30 @@ a:hover {
     margin-left: auto;
     display: flex;
     flex-direction: column;
-    /*border: solid black;*/
     padding-right: 80px;
 }
 
 .pd_CTA {
-    /*border: solid black;*/
     max-width: 280px;
     font-size: 24px;
     margin-top: 20px;
     margin-bottom: 50px
-    
 }
 
-.pd_dropdownSection{
+.pd_dropdownSection {
     width: 260px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
-    justify-items:center;
+    justify-items: center;
     gap: 15px;
-    /*border:solid maroon;*/
     margin-top: 40px;
     margin-right: 0px;
     margin-bottom: 40px;
-    margin-left:0px;
+    margin-left: 0px;
 }
 
 .pd_customization {
-    /*border: solid red;*/
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -394,7 +371,6 @@ a:hover {
 
 .pd_customization_text {
     font-size: 24px;
-    /*border: solid red;*/
     margin-bottom: 2px;
     line-height: 1;
 }
@@ -402,7 +378,6 @@ a:hover {
 .pd_dropdown {
     font-size: 22px;
     padding: 5px 10px;
-    /*border: solid red;*/
     width: 100%;
     border-style: solid;
     border-color: black;
@@ -414,18 +389,16 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*border: solid red;*/
     height: 50px;
     margin-top: 60px;
     margin-left: 0px;
-    
+
 }
 
 
-.pd_itemTotal_price {
-    /*border: solid black;*/
-    font-size: 20px;
-    font-weight: bold;
+#pd_itemTotal_price {
+    font-size: 20px !important;
+    font-weight: bold !important;
     margin-left: 0px;
     width: fit-content;
     height: fit-content;
@@ -433,13 +406,10 @@ a:hover {
 }
 
 .pd_button_addToCart {
-    /*border: solid red;*/
     width: 160px;
     height: 50px;
     font-size: 18px;
     margin: 2px;
-    /*padding: 5px 20px;*/
-    /*line-height: 1;*/
     transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out;
     /*found this on stack-overflow to help make button color change less jarring*/
 }

@@ -1,3 +1,5 @@
+console.log("script loaded")
+
 //Create objects for glazing + pack size options//
 const glazingOptions =
   [
@@ -71,60 +73,92 @@ function loadPackSizeOptions() {
 
 loadPackSizeOptions();
 
+
+// identify current glazing type and pack size (found this syntax on Stack Overflow)
+const glazingDropdown1 = document.getElementById('pd_dropdown_glazing');
+let currentGlazingSelection = glazingOptions[glazingDropdown1.value].glazingSelection
+
+const packSizeDropdown1 = document.getElementById('pd_dropdown_packSize');
+let currentPackSizeSelection = packSizeOptions[packSizeDropdown1.value].packSizeSelection
+
 //update price (on window load and in response to user inputs)
 
-let defaultPrice
+let basePrice
 let currentGlazingPrice = 0.00;
 let currentPackMultiplier = 1;
 
 function updatePrice() {
   const totalPriceElement = document.querySelector('#pd_itemTotal_price');
-  const totalPrice = (defaultPrice + currentGlazingPrice) * currentPackMultiplier;
+  const totalPrice = (basePrice + currentGlazingPrice) * currentPackMultiplier;
   totalPriceElement.textContent = `$ ${totalPrice.toFixed(2)}`
 }
 
 function glazingChange(glazingChangeSelection) {
   const glazingValue = glazingChangeSelection.value;
-  console.log(glazingValue);
   currentGlazingPrice = parseFloat(glazingOptions[glazingValue].priceAdaptation.replace('$', ''));
-  console.log(currentGlazingPrice);
   updatePrice()
+  currentGlazingSelection = glazingOptions[glazingValue].glazingSelection
 }
 
 function packSizeChange(packSizeChangeSelection) {
   const packSizeValue = packSizeChangeSelection.value;
-  console.log(packSizeValue);
   currentPackMultiplier = parseFloat(packSizeOptions[packSizeValue].priceAdaptation);
-  console.log(currentPackMultiplier);
   updatePrice()
+  currentPackSizeSelection = packSizeOptions[packSizeValue].packSizeSelection
 }
-
-updatePrice() //update price on window load
 
 
 // HW4 code//
 
 let cart = []
 
-
+//Update DOM elements based on roll type//
   const queryString = window.location.search;
   const params = new URLSearchParams(queryString);
   const rollType = params.get('roll');
-
-
-if (rollType && rolls[rollType]) {
   const currentRoll = rolls[rollType];
 
+  //set name:
   const rollName = document.querySelector('#pd_rollName');
-  const rollImage = document.querySelector('.pd_productPhoto');
+  rollName.innerText = rollType + ' Cinnamon Roll'
 
-  rollName.innerText = currentRoll + 'Cinnamon Roll';
-  defaultPrice = currentRoll[basePrice];
-  rollImage.src = "https://github.com/loganlewcmu/pui-hw-loganlew/blob/main/assets/products/";
-  rollImage.src = rollImage + currentRoll[imageFile];
+  //set image:
+  const imageStemURL = "https://raw.githubusercontent.com/loganlewcmu/pui-hw-loganlew/main/assets/products/";
+  const imageUpdatedURL = imageStemURL + currentRoll['imageFile']
+  document.getElementById('pd_productPhoto').src = imageUpdatedURL;
 
-  console.log(currentRoll);
-  console.log(rollImage.src);
-  console.log(defaultPrice)
+  //set base price:
+  basePrice = currentRoll['basePrice']
+
+
+updatePrice() //update price on window load
+
+
+// Add to shopping cart
+
+class Roll {
+  constructor(rollType, rollGlazing, packSize, basePrice) {
+      this.type = rollType;
+      this.glazing =  rollGlazing;
+      this.size = packSize;
+      this.basePrice = basePrice;
+  }
 }
+
+
+function addToCart () {
+  const newRoll = new Roll(
+    rollType, //roll type
+    currentGlazingSelection, 
+    currentPackSizeSelection,
+    basePrice,
+  );
+
+  cart.push(newRoll);
+  console.log(cart);
+
+}
+
+const addToCartButton = document.querySelector('.pd_button_addToCart');
+addToCartButton.addEventListener('click', addToCart);
 

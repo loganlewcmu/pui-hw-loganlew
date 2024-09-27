@@ -73,7 +73,7 @@ loadPackSizeOptions();
 
 //update price (on window load and in response to user inputs)
 
-const defaultPrice = 2.49
+let defaultPrice
 let currentGlazingPrice = 0.00;
 let currentPackMultiplier = 1;
 
@@ -112,4 +112,19 @@ let cart = []
   const rollType = params.get('roll');
 
 
+if (rollType && rolls[rollType]) {
+  const currentRoll = rolls[rollType];
+
+  const rollName = document.querySelector('#pd_rollName');
+  const rollImage = document.querySelector('.pd_productPhoto');
+
+  rollName.innerText = currentRoll + 'Cinnamon Roll';
+  defaultPrice = currentRoll[basePrice];
+  rollImage.src = "https://github.com/loganlewcmu/pui-hw-loganlew/blob/main/assets/products/";
+  rollImage.src = rollImage + currentRoll[imageFile];
+
+  console.log(currentRoll);
+  console.log(rollImage.src);
+  console.log(defaultPrice)
+}
 

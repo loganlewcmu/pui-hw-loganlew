@@ -305,7 +305,7 @@ a:hover {
 
 /* BODY STYLE ELEMENTS (Product Detail page only) */
 
-#pd_header {
+#pd_rollName {
     font-size: 24px;
     max-width: max-content;
     text-align: center;

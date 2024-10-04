@@ -1,54 +1,54 @@
 const glazingOptions =
-  [
-    {
-      glazingSelection: 'Original',
-      priceAdaptation: '$0.00',
-    },
-    {
-      glazingSelection: 'Sugar Milk',
-      priceAdaptation: '$0.00',
-    },
-    {
-      glazingSelection: 'Vanilla Milk',
-      priceAdaptation: '$0.50',
-    },
-    {
-      glazingSelection: 'Double Chocolate',
-      priceAdaptation: '$1.50',
-    },
-  ]
+    [
+        {
+            glazingSelection: 'Original',
+            priceAdaptation: '$0.00',
+        },
+        {
+            glazingSelection: 'Sugar Milk',
+            priceAdaptation: '$0.00',
+        },
+        {
+            glazingSelection: 'Vanilla Milk',
+            priceAdaptation: '$0.50',
+        },
+        {
+            glazingSelection: 'Double Chocolate',
+            priceAdaptation: '$1.50',
+        },
+    ]
 
 const packSizeOptions =
-  [
-    {
-      packSizeSelection: 1,
-      priceAdaptation: 1,
-    },
-    {
-      packSizeSelection: 3,
-      priceAdaptation: 3,
-    },
-    {
-      packSizeSelection: 6,
-      priceAdaptation: 5,
-    },
-    {
-      packSizeSelection: 12,
-      priceAdaptation: 10,
-    },
-  ]
+    [
+        {
+            packSizeSelection: 1,
+            priceAdaptation: 1,
+        },
+        {
+            packSizeSelection: 3,
+            priceAdaptation: 3,
+        },
+        {
+            packSizeSelection: 6,
+            priceAdaptation: 5,
+        },
+        {
+            packSizeSelection: 12,
+            priceAdaptation: 10,
+        },
+    ]
 
 class Roll {
     constructor(rollType, rollGlazing, packSize, rollPrice) {
         this.type = rollType;
-        this.glazing =  rollGlazing;
+        this.glazing = rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
 
         //calculate glazing price
         const elementGlazingSelection = glazingOptions.find(option => option.glazingSelection === this.glazing);
         const glazingPrice = elementGlazingSelection ? parseFloat(elementGlazingSelection.priceAdaptation.replace('$', '')) : 0; // Got this (and ternary operator) on Stack Overflow
-        
+
         //calculate pack multiplier
         const elementPackSize = packSizeOptions.find(option => option.packSizeSelection === this.size);
         console.log(elementPackSize)
@@ -62,39 +62,80 @@ class Roll {
 
 let cart = []
 
-const roll1 = new Roll (
+const roll1 = new Roll(
     'Original',
     'Sugar Milk',
     1,
     2.49,
-  );
-  
-  const roll2 =new Roll (
+);
+
+const roll2 = new Roll(
     'Walnut',
     'Vanilla Milk',
     12,
     3.49,
-  );
-  
-  const roll3 =new Roll (
+);
+
+const roll3 = new Roll(
     'Raisin',
     'Sugar Milk',
     3,
     2.99,
-  )
-  
-  const roll4 =new Roll (
+)
+
+const roll4 = new Roll(
     'Apple',
     'Original',
     3,
     3.49,
-  )
-  
-  cart.push(roll1, roll2, roll3, roll4);
+)
+
+cart.push(roll1, roll2, roll3, roll4);
 
 
-function calculatePrice() {
-    const totalPriceElement = document.querySelector('#pd_itemTotal_price');
-    const totalPrice = (basePrice + currentGlazingPrice) * currentPackMultiplier;
-    totalPriceElement.textContent = `$ ${totalPrice.toFixed(2)}`
-  }
+// Add Roll instances to DOM, making them visibile on shopping cart page
+
+function updateDOM(Roll) {
+    const template = document.querySelector('#itemOverview-template');
+    const clone = template.content.cloneNode(true);
+    itemOverviewElement = clone.querySelector('.cart_productOverview');
+
+    const itemContainerElement = document.querySelector('#cart_body');
+    itemContainerElement.prepend(itemOverviewElement)
+
+    function updateElement(Roll) {
+        //find HTML elements for image, title, glazing, pack size, price
+        const itemImageElement = itemContainerElement.querySelector('.cart_productPhoto');
+        const itemTitleElement = itemContainerElement.querySelector('.cart_productName');
+        const itemGlazingElement = itemContainerElement.querySelector('.cart_productGlazing');
+        const itemPackSizeElement = itemContainerElement.querySelector('.cart_productPackSize');
+        const itemPriceElement = itemContainerElement.querySelector('.cart_productPrice');
+    
+        //create intermediate variables to be used in subsequent steps
+        const thisRoll = Roll.type;
+        const itemURL = rolls[thisRoll]['imageFile'];
+        const rollImageStemURL = "https://raw.githubusercontent.com/loganlewcmu/pui-hw-loganlew/main/assets/products/";
+        const imageUpdatedURL = rollImageStemURL + itemURL;
+
+        //update HTML DOM elements
+        itemImageElement.src = imageUpdatedURL;
+        itemTitleElement.innerText = Roll.type + " Cinnamon Roll";
+        itemGlazingElement.innerText = `Glazing: ${Roll.glazing}`;
+        itemPackSizeElement.innerText = `Pack Size: ${Roll.size}`;
+        itemPriceElement.innerText = `$ ${Roll.itemPrice}`;
+    }
+
+    updateElement(Roll)
+}
+
+for (item of cart) {
+    updateDOM(item);
+}
+
+
+
+//constructor(rollType, rollGlazing, packSize, rollPrice) {
+    //this.type = rollType;
+    //this.glazing = rollGlazing;
+    //this.size = packSize;
+    //this.basePrice = rollPrice;

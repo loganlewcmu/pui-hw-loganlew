@@ -30,30 +30,34 @@
 
     </div>
 
-    <div class="cart_body">
+    <div class="cart_body" id="cart_body">
 
-        <div class="cart_productOverview" id="cart_original">
+        <template id="itemOverview-template">
+            <div class="cart_productOverview" id="cart_original">
 
-            <div class="left_box">
-                <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw5/product_detail.html">
-                    <img class="cart_productPhoto" id="cart_productPhoto_original"
-                        src="https://github.com/loganlewcmu/pui-hw-loganlew/blob/main/assets/products/original-cinnamon-roll.jpg?raw=true"
-                        alt="Image of cinnamon role">
-                </a>
-                <p class="cart_removeButton"> Remove </p>
-            </div>
-
-            <div class="right_box">
-                <div class="right_box_options">
+                <div class="left_box">
                     <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw5/product_detail.html">
-                        <p class="cart_productName" id="cart_productName_original"> Original Cinnamon Roll </p>
+                        <img class="cart_productPhoto" id="cart_productPhoto_original"
+                            src="https://github.com/loganlewcmu/pui-hw-loganlew/blob/main/assets/products/original-cinnamon-roll.jpg?raw=true"
+                            alt="Image of cinnamon role">
                     </a>
-                    <p class="cart_productGlazing" id="cart_productGlazing_original"> Glazing: Keep original </p>
-                    <p class="cart_productPackSize" id="cart_productPackSize_original"> Pack Size: 1 </p>
+                    <p class="cart_removeButton"> Remove </p>
                 </div>
-                <p class="cart_productPrice" id="cart_productPrice_original"> $ 2.49 </p>
+
+                <div class="right_box">
+                    <div class="right_box_options">
+                        <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw5/product_detail.html">
+                            <p class="cart_productName" id="cart_productName_original"> Original Cinnamon Roll </p>
+                        </a>
+                        <p class="cart_productGlazing" id="cart_productGlazing_original"> Glazing: Keep original </p>
+                        <p class="cart_productPackSize" id="cart_productPackSize_original"> Pack Size: 1 </p>
+                    </div>
+                    <p class="cart_productPrice" id="cart_productPrice_original"> $ 2.49 </p>
+                </div>
             </div>
-        </div>
+        </template>
+
+
 
     
         <div class="cart_productOverview" id="cart_doubleChocolate">

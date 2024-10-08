@@ -44,6 +44,7 @@ class Roll {
         this.glazing = rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
+        this.element = null
 
         //calculate glazing price
         const elementGlazingSelection = glazingOptions.find(option => option.glazingSelection === this.glazing);
@@ -51,12 +52,12 @@ class Roll {
 
         //calculate pack multiplier
         const elementPackSize = packSizeOptions.find(option => option.packSizeSelection === this.size);
-        console.log(elementPackSize)
         const packMultiplier = elementPackSize ? parseFloat(elementPackSize.priceAdaptation) : 0; // Got this (and ternary operator) on Stack Overflow
 
         //calculate item price
         const itemPriceDraft = (this.basePrice + glazingPrice) * packMultiplier;
-        this.itemPrice = itemPriceDraft.toFixed(2)
+        this.itemPrice = itemPriceDraft.toFixed(2);
+
     }
 }
 
@@ -126,16 +127,45 @@ function updateDOM(Roll) {
     }
 
     updateElement(Roll)
+    
+    // Store the DOM element in the Roll object to be used in deleteItem() function
+    Roll.element = itemOverviewElement
 }
 
 for (item of cart) {
     updateDOM(item);
 }
 
+//Update total price
+
+function updateTotal() {
+    const priceElement = document.querySelector('.total_amount')
+    
+    let total = 0
+    for (rollsInCart of cart) {
+        total = total + parseFloat(rollsInCart.itemPrice);
+    }
+    priceElement.innerText = `$ ${total.toFixed(2)}`
+}
+
+updateTotal()
 
 
-//constructor(rollType, rollGlazing, packSize, rollPrice) {
-    //this.type = rollType;
-    //this.glazing = rollGlazing;
-    //this.size = packSize;
-    //this.basePrice = rollPrice;
+//Remove item using remove button
+
+function deleteItem(Roll) {
+    if (Roll.element) {
+        Roll.element.remove(); // Remove the item from the DOM
+    }
+
+    const index = cart.indexOf(Roll)
+    if (index > -1) { 
+        cart.splice(index, 1); 
+    }; // Got this code from AI assistant in Chrome inspector feature
+    
+    updateTotal()
+    console.log(cart)
+}
+
+
+

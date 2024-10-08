@@ -21,6 +21,11 @@ a:hover {
     text-decoration: none;
 }
 
+/* MOUSE BEHAVIOR */
+.cart_removeButton {
+    cursor: pointer;
+}
+
 
 /* HEADER STYLE ELEMENTS (Applies to all pages) */
 

@@ -124,11 +124,18 @@ function updateDOM(Roll) {
         itemGlazingElement.innerText = `Glazing: ${Roll.glazing}`;
         itemPackSizeElement.innerText = `Pack Size: ${Roll.size}`;
         itemPriceElement.innerText = `$ ${Roll.itemPrice}`;
+
+        //create reference to Remove button, add event handler to Remove button
+        const removeButton = itemContainerElement.querySelector('.cart_removeButton');
+        removeButton.addEventListener('click', () => {
+            removeItem(Roll);
+        });
+
     }
 
     updateElement(Roll)
     
-    // Store the DOM element in the Roll object to be used in deleteItem() function
+    // Store the DOM element in the Roll object to be used in removeItem() function
     Roll.element = itemOverviewElement
 }
 
@@ -153,7 +160,7 @@ updateTotal()
 
 //Remove item using remove button
 
-function deleteItem(Roll) {
+function removeItem(Roll) {
     if (Roll.element) {
         Roll.element.remove(); // Remove the item from the DOM
     }

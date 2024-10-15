@@ -38,28 +38,6 @@ const packSizeOptions2 =
         },
     ]
 
-/*class Roll {
-    constructor(rollType, rollGlazing, packSize, rollPrice) {
-        this.type = rollType;
-        this.glazing = rollGlazing;
-        this.size = packSize;
-        this.basePrice = rollPrice;
-        this.element = null
-
-        //calculate glazing price
-        const elementGlazingSelection = glazingOptions2.find(option => option.glazingSelection === this.glazing);
-        const glazingPrice = elementGlazingSelection ? parseFloat(elementGlazingSelection.priceAdaptation.replace('$', '')) : 0; // Got this (and ternary operator) on Stack Overflow
-
-        //calculate pack multiplier
-        const elementPackSize = packSizeOptions2.find(option => option.packSizeSelection === this.size);
-        const packMultiplier = elementPackSize ? parseFloat(elementPackSize.priceAdaptation) : 0; // Got this (and ternary operator) on Stack Overflow
-
-        //calculate item price
-        const itemPriceDraft = (this.basePrice + glazingPrice) * packMultiplier;
-        this.itemPrice = itemPriceDraft.toFixed(2);
-
-    }
-}*/
 
 let cart = [] //learned from Stack Overflow I need to first define this variable globally in order for it to be usable in the retrieveCart_scPage function
 

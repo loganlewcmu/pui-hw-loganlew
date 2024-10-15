@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Bun Bun Shopping Cart</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<body>
+
+    <div class="header">
+
+        <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw6/index.html">
+            <img id="logo"
+                src="https://raw.githubusercontent.com/loganlewcmu/pui-hw-loganlew/0296ee21081084e1326cda38ee059eb96355de83/assets/logo/logo-01.svg"
+                alt="Bun Bun company logo">
+        </a>
+
+        <div class="header_nav_divider_title">
+            <nav class="navigation">
+                <p> <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw6/"> <span
+                            class="navigation_button" id="navigation_products"> PRODUCTS </span> </a>
+                </p>
+                <p> <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw6/shopping_cart.html"> <span
+                            class="navigation_button" id="navigation_cart"> CART </span> </p> </a>
+            </nav>
+
+            <hr class="header_pageBreak">
+
+            <p class="page_header" id="cart_header"> Our hand-made cinnamon rolls </p>
+        </div>
+
+    </div>
+
+    <div class="cart_body" id="cart_body">
+
+        <template id="itemOverview-template">
+            <div class="cart_productOverview">
+
+                <div class="left_box">
+                    <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw6/product_detail.html">
+                        <img class="cart_productPhoto" id="cart_productPhoto_original"
+                            src="https://github.com/loganlewcmu/pui-hw-loganlew/blob/main/assets/products/original-cinnamon-roll.jpg?raw=true"
+                            alt="Image of cinnamon role">
+                    </a>
+                    <p class="cart_removeButton"> Remove </p>
+                </div>
+
+                <div class="right_box">
+                    <div class="right_box_options">
+                        <a href="https://loganlewcmu.github.io/pui-hw-loganlew/solution-hw6/product_detail.html">
+                            <p class="cart_productName" id="cart_productName_original"> Original Cinnamon Roll </p>
+                        </a>
+                        <p class="cart_productGlazing" id="cart_productGlazing_original"> Glazing: Keep original </p>
+                        <p class="cart_productPackSize" id="cart_productPackSize_original"> Pack Size: 1 </p>
+                    </div>
+                    <p class="cart_productPrice" id="cart_productPrice_original"> $ 2.49 </p>
+                </div>
+            </div>
+        </template>
+
+
+        <div class="footer">
+
+            <hr class="footer_pageBreak">
+
+            <div class="container_total">
+                <p class="total_text"> Total </p>
+                <p class="total_amount"> $ 29.94 </p>
+            </div>
+
+            <div class="button_wrapper">
+                <button class="cart_button_checkout"> Checkout </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="rollsData.js"></script>
+    <script src="shopping_cart.js"></script>
+
+
+</body>
+
+</html>

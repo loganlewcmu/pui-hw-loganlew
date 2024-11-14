@@ -62,35 +62,6 @@ window.addEventListener('load', () => {
     updateTotal()
 });
 
-/*const roll1 = new Roll(
-    'Original',
-    'Sugar Milk',
-    1,
-    2.49,
-);
-
-const roll2 = new Roll(
-    'Walnut',
-    'Vanilla Milk',
-    12,
-    3.49,
-);
-
-const roll3 = new Roll(
-    'Raisin',
-    'Sugar Milk',
-    3,
-    2.99,
-)
-
-const roll4 = new Roll(
-    'Apple',
-    'Original',
-    3,
-    3.49,
-)*/
-
-//cart.push(roll1, roll2, roll3, roll4);
 
 
 // Add Roll instances to DOM, making them visibile on shopping cart page

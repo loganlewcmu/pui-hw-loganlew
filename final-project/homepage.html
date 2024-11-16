@@ -7,72 +7,75 @@
     <meta name="theme-color" content="#000000" />
     <meta 
         name="description" 
-        content="Discover your home away from home at Ritaville located in Sapphire Village Condominiums" 
-    />
-    <img 
-        alt="Logo" 
-        src="https://appproject.dhiwise.com/dhiwise-logo.png?c=&v=" 
-        style="width: 0px; height: 0px; display: none" 
+        content="Discover your home away from home at Ritaville located in Sapphire Village Condominiums, St. Thomas USVI" 
     />
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <link rel="stylesheet" type="text/css" href="./css/components.css" />
-    <link rel="stylesheet" type="text/css" href="./css/RespHome.css" />
+    <link rel="stylesheet" type="text/css" href="./css/homepage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/newCss.css" />
 </head>
+
 <body>
-    <!-- main content section -->
-    <div class="resp-home">
-        <div class="columnhome">
-            <!-- navigation bar section -->
-            <header class="header">
-                <div class="header__menu">
-                    <h3 class="column-condo_overview-hoveron-title ui heading size-headingmd">HOME</h3>
-                </div>
-                <ul class="header__menu-1">
-                    <li>
-                        <a href="#">
-                            <p class="ui text size-textmd">Condo overview</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p class="ui text size-textmd">Plan your trip</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p class="ui text size-textmd">Welcome guide</p>
-                        </a>
-                    </li>
-                </ul>
-            </header>
-            <button class="header__button ui button white_a700_26 size-xs fill round">
+    <div class="homepage">
+        <!-- navigation bar section -->
+        <div class="navHeader">
+            <h3 class="navHeader_home">HOME</h3>
+
+            <ul class="navHeader_menu">
+                <li class="navHeader_menuItem">
+                    <a href="#">
+                        <p class="navHeader_menuItem_text">Condo overview</p>
+                    </a>
+                </li>
+                <li class="navHeader_menuItem">
+                    <a href="#">
+                        <p class="navHeader_menuItem_text">Plan your trip</p>
+                    </a>
+                </li>
+                <li class="navHeader_menuItem">
+                    <a href="#">
+                        <p class="navHeader_menuItem_text">Welcome guide</p>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="button_contact">
                 <span>Contact host</span>
-                <img src="public/images/img_lock.svg" alt="Lock" class="mail" />
+                <img src="public/images/img_lock.svg" alt="envelope icon" class="envelope_icon" />
             </button>
-        </header>
-<div class="columnlocatedat">
-    <!-- welcome section -->
-    <div class="titlecard">
-        <div class="welcome-column">
-            <h1 class="column-condo_overview-hoveron-title ui heading size-headinglg">Welcome to Ritaville</h1>
-            <p class="ui text size-textlg">Guest Manual</p>
+
         </div>
 
-        <!-- address section -->
-        <div class="address-card">
-            <h2 class="address-card__location ui heading size-headings">
-                <span class="address-card__location-span">Located at&nbsp;</span>
-                <span>SAPPHIRE VILLAGE CONDOMINIUMS</span>
-            </h2>
-            <p class="address-card__address ui text size-texts">
-                6700 Sapphire Village, Smith Bay,<br />St Thomas 00802, USVI
-            </p>
+        <!-- main content section -->
+        <div class="contentArea_homepage">
+            <!-- welcome/title -->
+
+            <div class="textCards_homepage" >
+                <div class="titleCard">
+                    <h1 class="title_homepage"> Welcome to Ritaville</h1>
+                    <h2 class="subtitle_homepage"> Guest Manual</h2>
+                </div>
+
+                <!-- address info -->
+                <div class="addressCard">
+                    <h2 class="addressHeader_homepage"> Located at <span>SAPPHIRE VILLAGE <br>
+                                                                        CONDOMINIUMS</span>
+                    </h2>
+                    <h2 class="addressDetails_homepage"> 6700 Sapphire Village, Smith Bay,<br>
+                                                        St. Thomas 00602, USVI
+                    </h2>
+                </div>
+            </div>
+
+            <!-- book button -->
+            <a href="https://www.airbnb.com/rooms/584075861555690973">
+                <button class="button_bookOnAirbnb">
+                    Book on Airbnb
+                </button>
+            </a>
         </div>
     </div>
-    <button class="button__book ui button cyan_800_66 size-sm fill round">Book on Airbnb</button>
-</div>
-</div>
 </body>
-</html>
+</html>        

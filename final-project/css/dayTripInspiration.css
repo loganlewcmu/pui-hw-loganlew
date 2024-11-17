@@ -1,0 +1,96 @@
+/* Background image */
+.pageContainer_nonHomepage {
+    border: none;
+    padding: 0px;
+    position: relative;
+    background-color: #8FDAEE;
+    z-index: 0;
+}
+
+/* Main content area */
+.contentArea_dayTripInspiration {
+    border: solid red 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px;
+    position: relative;
+    margin: 0 auto; /* Centers the content */
+    min-height: 100vh; /* Ensure it takes at least the full viewport height */
+    z-index: 1;
+}
+
+.STT_Map{
+    position: relative; /* This makes POIs positioned relative to the map */
+    width: 100%;
+    height: 100%;
+}
+
+/* Title section */
+.title_nonHomepage {
+    border: dotted red 2px;
+    margin: 0;
+    padding: 10px 10px;
+    color: #1F5555;
+}
+
+
+
+/* Points of Interest */
+.poi {
+    position: absolute; /* Absolutely position the POI elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* POI Marker (Square with rounded corners) */
+.poi-marker {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid #1F5555; /* Border color */
+    border-radius: 12px; /* Rounded corners */
+    position: relative;
+}
+
+/* POI Line */
+.poi-line {
+    width: 2px;
+    height: 50px; /* Height of the line */
+    background-color: #1F5555; /* Line color */
+    margin-top: -20px; /* Adjust to position the line correctly */
+}
+
+/* POI Label */
+.poi-label {
+    color: #1F5555;
+    font-size: 14px; /* Adjust label font size */
+    text-align: center;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+/* Example of POI positions */
+.poi:nth-child(1) { top: 45%; left: 30%; }
+.poi:nth-child(2) { top: 45%; left: 61%; }
+.poi:nth-child(3) { top: 60%; left: 70%; }
+.poi:nth-child(4) { top: 60%; left: 75%; }
+.poi:nth-child(5) { top: 60%; left: 80%; }
+.poi:nth-child(6) { top: 60%; left: 85%; }
+
+/* Responsive adjustments for POI markers and labels */
+@media (max-width: 800px) {
+    .poi {
+        /* Ensure POIs scale well on smaller screens */
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .poi {
+        font-size: 10px; /* Adjust font size on very small screens */
+    }
+}

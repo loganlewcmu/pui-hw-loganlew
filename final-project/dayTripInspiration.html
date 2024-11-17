@@ -10,18 +10,15 @@
         content="Discover your home away from home at Ritaville located in Sapphire Village Condominiums, St. Thomas USVI" 
     />
     <link rel="stylesheet" type="text/css" href="./css/newCss.css" />
-    <link rel="stylesheet" type="text/css" href="./css/homepage.css" />
-    
+    <link rel="stylesheet" type="text/css" href="./css/dayTripInspiration.css" />
     <script src="script.js" defer></script>
-
 </head>
 
 <body>
-    <div class="pageContainer_homepage">
+    <div class="pageContainer_nonHomepage">
         <!-- navigation bar section -->
-        <nav class="navHeader_homepage">
+        <nav class="navHeader_nonHomepage">
             <h3 class="navHeader_home">HOME</h3>
-            
             <div class="hideOnMobile">
                 <ul class="navHeader_menu">
                     <li class="navHeader_menuItem">
@@ -41,8 +38,6 @@
                     </li>
                 </ul>
             </div>
-            
-
             <li class="menu_button" onclick=toggleSidebar()>
                 <a href="#">
                     <svg id="menu_icon" class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed">
@@ -50,11 +45,8 @@
                     </svg>
                 </a>
             </li>
-
              <!-- responsive / mobile state -->
             <ul class="nav_sidebar">
-                <!--<div class="ex_button" onclick=hideSidebar()> <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> </a> </div>-->
-                
                 <li class="navSidebar_menuItem">
                     <a href="#">
                         <p class="navSidebar_menuItem_text">Condo overview</p>
@@ -70,32 +62,47 @@
                         <p class="navSidebar_menuItem_text">Welcome guide</p>
                     </a>
                 </li>
-                
             </ul>
-
         </nav>
-
         <!-- main content section -->
-        <div class="contentArea_homepage">
-            <!-- welcome/title -->
-
-            <div class="textCards_homepage" >
-                <div class="titleCard">
-                    <h1 class="title_homepage"> Welcome to Ritaville</h1>
-                    <h2 class="subtitle_homepage"> Guest Manual</h2>
+        <div class="contentArea_dayTripInspiration">
+            <h1 class="title_nonHomepage" id="title_dayTripInspiration"> Day trip inspiration</h1>
+            <!-- hero image -->
+            <div class="responsiveFrame">
+                <img src="./Assets/Images/STT_and_STJ.png" alt="St. Thomas Map" class="responsiveImage" id="STT_Map">
+                <!-- Points of Interest -->
+                <div class="poi" style="top: 45%; left: 30%;">
+                    <div class="poi-marker"></div>
+                    <div class="poi-line"></div>
+                    <div class="poi-label">Swim at Magens Bay and eat nearby</div>
+                </div>
+                <div class="poi" style="top: 45%; left: 61%;">
+                    <div class="poi-marker"></div>
+                    <div class="poi-line"></div>
+                    <div class="poi-label">Go on a chartered boat trip</div>
+                </div>
+                <div class="poi" style="top: 60%; left: 70%;">
+                    <div class="poi-marker"></div>
+                    <div class="poi-line"></div>
+                    <div class="poi-label">Take the ferry to St. John</div>
+                </div>
+                <div class="poi" style="top: 60%; left: 70%;">
+                    <div class="poi-marker"></div>
+                    <div class="poi-line"></div>
+                    <div class="poi-label">Visit local farmer's markets</div>
+                </div>
+                <div class="poi" style="top: 60%; left: 70%;">
+                    <div class="poi-marker"></div>
+                    <div class="poi-line"></div>
+                    <div class="poi-label">Visit Water Island</div>
+                </div>
+                <div class="poi" style="top: 60%; left: 70%;">
+                    <div class="poi-marker"></div>
+                    <div class="poi-line"></div>
+                    <div class="poi-label">Visit the historical Frechtown</div>
                 </div>
 
-                <!-- address info -->
-                <div class="addressCard">
-                    <h2 class="addressHeader_homepage"> Located at <span>SAPPHIRE VILLAGE <br>
-                                                                        CONDOMINIUMS</span>
-                    </h2>
-                    <h2 class="addressDetails_homepage"> 6700 Sapphire Village, Smith Bay,<br>
-                                                        St. Thomas 00602, USVI
-                    </h2>
-                </div>
             </div>
-
             <!-- book button -->
             <a href="https://www.airbnb.com/rooms/584075861555690973">
                 <button class="button_bookOnAirbnb">
@@ -104,6 +111,5 @@
             </a>
         </div>
     </div>
-
 </body>
-</html>        
+</html>

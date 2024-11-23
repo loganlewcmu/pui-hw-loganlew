@@ -180,26 +180,6 @@
 }
 
 
-/* images */
-
-.responsiveFrame {
-    border: solid red 2px;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%; /* Adjust the percentage for different aspect ratios (e.g., 75% for 4:3, 56.25% for 16:9) */
-    box-sizing: border-box;
-    margin: 0 auto;
-}
-
-.responsiveFrame .responsiveImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensures the image scales properly */
-    border: none;
-}
     
 
 

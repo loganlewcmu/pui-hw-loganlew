@@ -1,3 +1,21 @@
+/* list + list item settings */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 /* Background image */
 .pageContainer_nonHomepage {
     border: none;
@@ -35,51 +53,81 @@
 
 
 
-/* Points of Interest */
-.poi {
-    position: absolute; /* Absolutely position the POI elements */
+/* images */
+
+.responsiveFrame {
+    border: solid orange 4px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* Adjust the percentage for different aspect ratios (e.g., 75% for 4:3, 56.25% for 16:9) */
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 0 auto;
 }
 
-/* POI Marker (Square with rounded corners) */
+.responsiveFrame .responsiveImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image scales properly */
+    border: none;
+    z-index: 1000
+}
+
+/* POI Settings */
+
+.poi-list {
+    border: solid red 2px;
+    display: flex;
+    flex-direction: row;
+    bottom:0;
+    left:0;
+    position: absolute;
+    z-index: 2000;
+    gap: 70px;
+}
+
+.poi-list_left, poi-list-right {
+    border: dotted red 2px;
+}
+
 .poi-marker {
     width: 20px;
     height: 20px;
     background-color: transparent;
-    border: 2px solid #1F5555; /* Border color */
-    border-radius: 12px; /* Rounded corners */
-    position: relative;
+    border: 2px solid #1F5555;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%, -50%); /* Adjust for marker's own size to perfectly center it */
+    z-index: 3000;
 }
 
-/* POI Line */
-.poi-line {
-    width: 2px;
-    height: 50px; /* Height of the line */
-    background-color: #1F5555; /* Line color */
-    margin-top: -20px; /* Adjust to position the line correctly */
-}
-
-/* POI Label */
-.poi-label {
+.poi-list_item {
+    border: dotted red 2px;
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /*min-width: 400px; /* Replace 150px with the appropriate value */
+    text-align: left;
     color: #1F5555;
-    font-size: 14px; /* Adjust label font size */
-    text-align: center;
-    padding: 5px 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 4px;
-    margin-top: 10px;
-    white-space: nowrap;
+    font-weight: normal;
+    transition: font-weight 0.3s ease;
 }
 
-/* Example of POI positions */
-.poi:nth-child(1) { top: 45%; left: 30%; }
-.poi:nth-child(2) { top: 45%; left: 61%; }
-.poi:nth-child(3) { top: 60%; left: 70%; }
-.poi:nth-child(4) { top: 60%; left: 75%; }
-.poi:nth-child(5) { top: 60%; left: 80%; }
-.poi:nth-child(6) { top: 60%; left: 85%; }
+.poi-list_item:hover {
+    font-weight: bold;
+}
+
+.poi-list_item_p {
+    padding: 10px 4px 10px 4px;
+    border: dotted yellow 2px;
+    margin: 0px;
+}
 
 /* Responsive adjustments for POI markers and labels */
 @media (max-width: 800px) {

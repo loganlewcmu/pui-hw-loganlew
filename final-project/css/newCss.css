@@ -172,7 +172,7 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    z-index: 800; /* Ensure it's below the nav_sidebar */
+    z-index: 3000; /* Ensure it's below the nav_sidebar */
 }
 
 .button__bookOnAirbnb:hover {

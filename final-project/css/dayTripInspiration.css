@@ -32,13 +32,13 @@ li a {
     flex-direction: column;
     padding: 0px 0px;
     position: relative;
-    margin: 0 auto; /* Centers the content */
-    min-height: 90vh; /* Ensure it takes at least the full viewport height */
+    margin: 0 auto; 
+    min-height: 90vh; 
     z-index: 1;
 }
 
 .STT_Map{
-    position: relative; /* This makes POIs positioned relative to the map */
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -59,7 +59,7 @@ li a {
     border: solid orange 4px;
     width: 100%;
     position: relative;
-    padding-bottom: 56.25%; /* Adjust the percentage for different aspect ratios (e.g., 75% for 4:3, 56.25% for 16:9) */
+    padding-bottom: 56.25%; 
     box-sizing: border-box;
     display: flex;
     justify-content: flex-start;
@@ -73,7 +73,7 @@ li a {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the image scales properly */
+    object-fit: contain;
     border: none;
     z-index: 1000
 }
@@ -92,8 +92,8 @@ li a {
     z-index: 2000;
     gap: 70px;
     max-width: 1000px;
-    position: fixed; /* Fix the button to the bottom */
-    bottom: 20px; /* 20px from the bottom of the viewport */
+    position: fixed; 
+    bottom: 20px; 
     left: 2%;
 }
 
@@ -108,7 +108,7 @@ li a {
     border: 2px solid #1F5555;
     border-radius: 5px;
     position: absolute;
-    transform: translate(-50%, -50%); /* Adjust for marker's own size to perfectly center it */
+    transform: translate(-50%, -50%);
     z-index: 3000;
 }
 
@@ -118,7 +118,7 @@ li a {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    /*min-width: 400px; /* Replace 150px with the appropriate value */
+    
     text-align: left;
     color: #1F5555;
     font-weight: normal;
@@ -159,26 +159,26 @@ li a {
 }
 
 .DTI_card_right img, .DTI_card_left img  {
-    width: 100%; /* Full width of the card */
-    height: 100%; /* Full height of the card */
-    object-fit: cover; /* Ensures the entire image is shown */
-    border-radius: inherit; /* Inherit rounded corners from the parent */
-    position: absolute; /* Align the image properly */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    position: absolute;
     top: 0%;
     left: 0%;
 }
 
 .text_card {
     position: absolute;
-    bottom: 0; /* Stick to the bottom of the card */
-    width: 100%; /* Full width of the card */
+    bottom: 0;
+    width: 100%;
     height: 52px;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
-    color: white; /* White text */
-    font-size: 24px; /* Adjust text size */
+    background-color: rgba(0, 0, 0, 0.4); 
+    color: white; 
+    font-size: 24px;
     text-align: left;
-    padding: 10px; /* Add padding around the text */
-    backdrop-filter: blur(5px); /* Apply a subtle blur effect */
+    padding: 10px;
+    backdrop-filter: blur(5px);
     box-sizing: border-box;
 }
 
@@ -241,12 +241,14 @@ li a {
 
 /* Content Section */
 .dti_deepDive_content {
+    border: solid red 2px;
     display: flex;
     gap: 20px;
 }
 
 /* Left Section */
 .dti_deepDive_left {
+    border: solid red 2px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -271,30 +273,54 @@ li a {
 
 /* Middle Section */
 .dti_deepDive_middle {
-    flex: 1;
+    width: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+
 .dti_deepDive_visuals {
     position: relative;
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.dti_deepDive_visuals:first-of-type {
+    display: block;
 }
 
 .dti_deepDive_visuals img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover
 }
 
 .dti_deepDive_caption {
-    font-size: 14px;
-    color: #777;
-    margin-top: 5px;
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 52px;
+    background-color: rgba(255, 255, 255, .1);
+    color: white;
+    font-size: 24px;
+    text-align: left;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 1
 }
 
 .dti_deepDive_navigation {
@@ -332,18 +358,35 @@ li a {
 
 .dti_deepDive_tip {
     padding: 10px;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 100;
     margin: 0 0 10px;
     color: #eaeaeaea;
-    background-color: transparent; /* Ensure background is transparent */
+    background-color: transparent;
     
     /* Transparent border for spacing */
     border: 5px solid transparent; 
-    border-radius: 16px; /* Rounded corners */
+    border-radius: 16px;
     
     /* Gradient applied to the border */
-    border-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1)); 
-    border-image-slice: 1; /* Ensures gradient is applied to the border */
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)); 
+    border-image-slice: 1;
+}
+
+.dti_deepDive_tip:hover {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 100;
+    margin: 0 0 10px;
+    color: #eaeaeaea;
+    background-color: transparent;
+    
+    /* Transparent border for spacing */
+    border: 5px solid transparent; 
+    border-radius: 16px;
+    
+    /* Gradient applied to the border */
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); 
+    border-image-slice: 1;
 }
 

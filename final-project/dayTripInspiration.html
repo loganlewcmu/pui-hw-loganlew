@@ -71,12 +71,12 @@
             <div class="responsiveFrame">
                 <img src="./Assets/Images/STT_and_STJ.png" alt="St. Thomas Map" class="responsiveImage" id="STT_Map">
                 <!-- Points of Interest -->
-                <div class="poi-marker" style="top: 48%; left: 40%;" id="poiMarker_swimAtMagens"></div>
-                <div class="poi-marker" style="top: 68%; left: 66%;" id="poiMarker_ferrySTJ"></div>
-                <div class="poi-marker" style="top: 47%; left: 69%;" id="poiMarker_charteredBoat"></div>
+                <div class="poi-marker" style="top: 48%; left: 40%;" id="poiMarker_Magens"></div>
+                <div class="poi-marker" style="top: 68%; left: 66%;" id="poiMarker_ferryToSTJ"></div>
+                <div class="poi-marker" style="top: 47%; left: 69%;" id="poiMarker_charterBoat"></div>
                 <div class="poi-marker" style="top: 48%; left: 9%;" id="poiMarker_farmersMarket_1"></div>
                 <div class="poi-marker" style="top: 59%; left: 38%;" id="poiMarker_farmersMarket_2"></div>
-                <div class="poi-marker" style="top: 62%; left: 35%;" id="poiMarker_frenchTown"></div>
+                <div class="poi-marker" style="top: 62%; left: 35%;" id="poiMarker_frenchtown"></div>
                 <div class="poi-marker" style="top: 71%; left: 32%;" id="poiMarker_waterIsland"></div>
 
             </div>
@@ -95,7 +95,7 @@
                     </li>
                     <li class="poi-list_item" data-target="dti_deepDive_card_charterBoat">
                         <a href="#">
-                            <p class="poi-list_item_p" id="poi_li_boatCharter">Go on a chartered boat tour</p>
+                            <p class="poi-list_item_p" id="poi_li_charterBoat">Go on a chartered boat tour</p>
                         </a>
                     </li>
                 </ul>
@@ -141,16 +141,6 @@
                 </div>
             </div>
 
-
-        
-            
-            <!-- book button -->
-
-            <!--
-            <div class="dayTripFrame">
-                <img src="./Assets/Images/STT_and_STJ.png" alt="St. Thomas Map" class="responsiveImage" id="STT_Map">
-            </div>
-            -->
 
             <div class="dti_deepDive_card" id="dti_deepDive_card_ferryToSTJ">
                 
@@ -261,14 +251,237 @@
                     <!-- Right Section -->
                     <div class="dti_deepDive_right">
                         <h3 class="dti_deepDive_sectionTitle">FOOD RECS NEARBY</h3>
-                        <div class="dti_deepDive_tip"> <a href="https://www.google.com/maps/place/Udder+Delights+Ice+Cream+Parlor/@18.36008,-64.9147837,4103m/data=!3m1!1e3!4m6!3m5!1s0x8c051aa4ff5e2395:0x2510a8083a726bbd!8m2!3d18.36008!4d-64.9147837!16s%2Fg%2F11b66hc8vl?entry=ttu&g_ep=EgoyMDI0MTIwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Udder Delight</a>: Ice creamery with local flavors and ingredients (anything rum-flavored or rum-spiked is delicious).</div>
-                        <div class="dti_deepDive_tip"> <a href="https://www.google.com/maps/place/Brooks+Bar+%26+Restaurant/@18.3562598,-64.9148715,4103m/data=!3m1!1e3!4m6!3m5!1s0x8c051aa39f8af94b:0xa9e133eb4a26b466!8m2!3d18.3562598!4d-64.9148715!16s%2Fg%2F11cltlb9n6?entry=ttu&g_ep=EgoyMDI0MTIwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank"> Brooke’s Bar</a>: Casual indoor-outdoor restaurant serving local staples including fish, stewed meat and veggies, plantains, and more.</div>
+                        <div class="dti_deepDive_tip"> <a href="https://www.google.com/maps/place/Udder+Delights+Ice+Cream+Parlor/@18.36008,-64.9147837,4103m/data=!3m1!1e3!4m6!3m5!1s0x8c051aa4ff5e2395:0x2510a8083a726bbd!8m2!3d18.36008!4d-64.9147837!16s%2Fg%2F11b66hc8vl?entry=ttu&g_ep=EgoyMDI0MTIwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Udder Delight</a>: Ice creamery with local flavors and ingredients (anything rum-flavored is delicious).</div>
+                        <div class="dti_deepDive_tip"> <a href="https://www.google.com/maps/place/Brooks+Bar+%26+Restaurant/@18.3562598,-64.9148715,4103m/data=!3m1!1e3!4m6!3m5!1s0x8c051aa39f8af94b:0xa9e133eb4a26b466!8m2!3d18.3562598!4d-64.9148715!16s%2Fg%2F11cltlb9n6?entry=ttu&g_ep=EgoyMDI0MTIwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank"> Brooke’s Bar</a>: Casual indoor-outdoor restaurant serving local staples like fish, stewed meat and veggies, plantains, and more.</div>
                         <!--<div class="dti_deepDive_tip">Mafolie: Upscale, specializing in seafood with a beautiful view of Charlotte Amalie. Call in advance to reserve.</div> -->
                         <div class="gradient-border" ></div>
                     </div>
                 </div>
             </div>
 
+            <div class="dti_deepDive_card" id="dti_deepDive_card_charterBoat">
+                <!-- Header -->
+                <div class="dti_deepDive_header">
+                    <div class="dti_deepDive_header_content">
+                        <button class="dti_deepDive_navHeaderButton prev-btn">❮</button>
+                        <h2 class="dti_deepDive_title">Go on a chartered boat tour</h2>
+                        <button class="dti_deepDive_navHeaderButton next-btn">❯</button>
+                    </div>
+                    <button class="dti_deepDive_closeButton">✖</button>
+                </div>
+            
+                <!-- Content -->
+                <div class="dti_deepDive_content">
+                    <!-- Left Section -->
+                    <div class="dti_deepDive_left">
+                        <h3 class="dti_deepDive_sectionTitle">OVERVIEW</h3>
+                        <p class="dti_deepDive_text_left">
+                            St. Thomas sits in one of the prettiest seas I have ever seen, and there are many ways to get out and enjoy the water. Book an excursion, ranging from turtle-spotting to a sunset dinner cruise.
+                            <br>
+                            <br>
+                            Don't forget to pack motion sickness medication if needed. And bring some extra cash to tip your boat crew!                           
+                        </p>
+                    </div>
+                    
+                    <!-- Middle Section -->
+                    <div class="dti_deepDive_middle">
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_Charter_SunsetCruise">
+                            <img src="./Assets/Images/Charter_SunsetCruise.jpg" alt="sailboat on the water during sunset; sky is orange" />
+                            <div class="dti_deepDive_caption">My favorite sunset tour</div>
+                        </div>
+                        
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_charter_snorkeling">
+                            <img src="./Assets/Images/Charter_Snorkeling.jpg" alt="person snorkeling swimming next to turtle" />
+                            <div class="dti_deepDive_caption" style="color: #ffffff;">My favorite snorkeling boat tour</div>
+                        </div>
+            
+                        <div class="dti_deepDive_navigation">
+                            <button class="dti_deepDive_navButton">❮</button>
+                            <button class="dti_deepDive_navButton">❯</button>
+                        </div>
+                    </div>
+            
+                    <!-- Right Section -->
+                    <div class="dti_deepDive_right">
+                        <h3 class="dti_deepDive_sectionTitle">RECOMMENDED COMPANIES</h3>
+                        <div class="dti_deepDive_tip"> <a href="https://oceansurfari.com/">Ocean Surfari</a>: (340) 227-5448</div>
+                        <div class="dti_deepDive_tip"> <a href="https://driftcharters.com/">Drift Charters</a>: (912) 687-0362</div>
+                        <div class="dti_deepDive_tip"> <a href="https://www.thevicat.com/">The VI Cat</a>: (340) 690-2287</div>
+                        <div class="gradient-border" ></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dti_deepDive_card" id="dti_deepDive_card_farmersMarket">
+                <!-- Header -->
+                <div class="dti_deepDive_header">
+                    <div class="dti_deepDive_header_content">
+                        <button class="dti_deepDive_navHeaderButton prev-btn">❮</button>
+                        <h2 class="dti_deepDive_title">Eat fresh at a local farmers market</h2>
+                        <button class="dti_deepDive_navHeaderButton next-btn">❯</button>
+                    </div>
+                    <button class="dti_deepDive_closeButton">✖</button>
+                </div>
+            
+                <!-- Content -->
+                <div class="dti_deepDive_content">
+                    <!-- Left Section -->
+                    <div class="dti_deepDive_left">
+                        <h3 class="dti_deepDive_sectionTitle">OVERVIEW</h3>
+                        <p class="dti_deepDive_text_left">
+                            Market Square, located downtown, is open Saturdays from 5am - 4pm
+                            <br>
+                            <br>
+                            Try some local fruits, fish, and soup. Then walk around St. Thomas’ city center.
+                            <br>
+                            <br>
+                            Bordeau Farmer's market is located out west and open on the 2nd and last Saturday every month from 10am-2pm.
+                            <br>
+                            <br>
+                            Twice per month, local farmers convene in the island’s westernmost region to sell their homegrown foods. Enjoy food, music, and the island’s agrarian life.
+                        </p>
+                    </div>
+                    
+                    <!-- Middle Section -->
+                    <div class="dti_deepDive_middle">
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_farmersMarket_hero">
+                            <img src="./Assets/Images/FarmersMarket_hero.jpg" alt="produce on display at a market" />
+                            <div class="dti_deepDive_caption">Locally-grown produce at Market Square</div>
+                        </div>
+                        
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_farmersMarket_secondary">
+                            <img src="./Assets/Images/FarmersMarket_secondary.jpg" alt="bananas and greens at Bordeau Farmers Market" />
+                            <div class="dti_deepDive_caption" style="color: #ffffff;">Fresh spices, herbs, and seeds at Bordeaux Market</div>
+                        </div>
+            
+                        <div class="dti_deepDive_navigation">
+                            <button class="dti_deepDive_navButton">❮</button>
+                            <button class="dti_deepDive_navButton">❯</button>
+                        </div>
+                    </div>
+            
+                    <!-- Right Section -->
+                    <div class="dti_deepDive_right">
+                        <h3 class="dti_deepDive_sectionTitle">ADDRESSES</h3>
+                        <div class="dti_deepDive_tip"> Market Square: Strand Gade, Charlotte Amalie </div>
+                        <div class="dti_deepDive_tip"> Bordeaux Farmer's Market: Fortuna Rd, Bordeaux </div>
+                        <div class="gradient-border" ></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dti_deepDive_card" id="dti_deepDive_card_waterIsland">
+                <!-- Header -->
+                <div class="dti_deepDive_header">
+                    <div class="dti_deepDive_header_content">
+                        <button class="dti_deepDive_navHeaderButton prev-btn">❮</button>
+                        <h2 class="dti_deepDive_title">Visit Water Island</h2>
+                        <button class="dti_deepDive_navHeaderButton next-btn">❯</button>
+                    </div>
+                    <button class="dti_deepDive_closeButton">✖</button>
+                </div>
+            
+                <!-- Content -->
+                <div class="dti_deepDive_content">
+                    <!-- Left Section -->
+                    <div class="dti_deepDive_left">
+                        <h3 class="dti_deepDive_sectionTitle">OVERVIEW</h3>
+                        <p class="dti_deepDive_text_left">
+                            Located across the bay from Charlotte Amalie is <a href="https://www.vinow.com/waterisland/" target="_blank">Water Island</a>. Quaint and with stunning views, it makes for a perfect afternoon to evening trip.
+                            <br>
+                            <br>
+                            Take the Water Island Ferry from Crown Bay Marina, snorkel at <a href="https://www.justgottadive.com/dive_resources/travel_articles/exploring-st-thomass-pristine-reefs-five-dives-add-your-bucket-list" target="_blank">Supermarket Reef</a>, and visit <a href="https://www.saj.usace.army.mil/FortSegarra/" target="_blank">Fort Segarra</a> (an abandoned WWII outpost). End the evening with a dinner at one of the island’s two restaurants, and enjoy the stunning view of Charlotte Amalie on the boatride home.
+                            <br>
+                            <br>
+                            See ferry information <a href="https://waterislandferry.com/" target="_blank">here</a> here.
+                        </p>
+                    </div>
+                    
+                    <!-- Middle Section -->
+                    <div class="dti_deepDive_middle">
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_waterIsland">
+                            <img src="./Assets/Images/WaterIsland.jpg" alt="Water Island with Charlotte Amalie across the bay in the background" />
+                            <div class="dti_deepDive_caption" style="color: #ffffff;">Water Island, with a view of Charlotte Amalie</div>
+                        </div>
+                        
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_waterIsland_SupermarketReef">
+                            <img src="./Assets/Images/WaterIsland_SupermarketReef.png" alt="beach with rocky shore" />
+                            <div class="dti_deepDive_caption" style="color: #000000;">Supermarket Reef off the coast of Water Island</div>
+                        </div>
+            
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_waterIsland_FortSegarra">
+                            <img src="./Assets/Images/WaterIsland_FortSegarra.png" alt="concrete path descending into an old tunnel" />
+                            <div class="dti_deepDive_caption" style="color: #000000;">Entrance to Fort Segarra </div>
+                        </div>
+            
+                        <div class="dti_deepDive_navigation">
+                            <button class="dti_deepDive_navButton">❮</button>
+                            <button class="dti_deepDive_navButton">❯</button>
+                        </div>
+                    </div>
+            
+                    <!-- Right Section -->
+                    <div class="dti_deepDive_right">
+                        <h3 class="dti_deepDive_sectionTitle">FOOD RECS NEARBY</h3>
+                        <div class="dti_deepDive_tip">  There are no convenience stores, grocery stores, or pharmacies on this small island.</div>
+                        <div class="dti_deepDive_tip">  If you have binoculars, bring them! You’ll have a great view of Charlotte Amalie.</div>
+                        <div class="gradient-border" ></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dti_deepDive_card" id="dti_deepDive_card_frenchtown">
+                <!-- Header -->
+                <div class="dti_deepDive_header">
+                    <div class="dti_deepDive_header_content">
+                        <button class="dti_deepDive_navHeaderButton prev-btn">❮</button>
+                        <h2 class="dti_deepDive_title">Visit the historic Frenchtown</h2>
+                        <button class="dti_deepDive_navHeaderButton next-btn">❯</button>
+                    </div>
+                    <button class="dti_deepDive_closeButton">✖</button>
+                </div>
+            
+                <!-- Content -->
+                <div class="dti_deepDive_content">
+                    <!-- Left Section -->
+                    <div class="dti_deepDive_left">
+                        <h3 class="dti_deepDive_sectionTitle">OVERVIEW</h3>
+                        <p class="dti_deepDive_text_left">
+                            St. Thomas was colonized by various European forces in the 17th and 18th centuries. French colonists became the islands’ predominant fishermen, and they settled in what is now called Frenchtown (my parents’ and grandparents’ birthplace).
+                            <br>
+                            <br>
+                            Follow in my childhood footsteps and watch the fisherman bring in their daily catch (if you arrive early in the morning). You can then learn more about the island’s history at the French Heritage Museum and poke your head into a local restaurant or bar.
+                        </p>
+                    </div>
+                    
+                    <!-- Middle Section -->
+                    <div class="dti_deepDive_middle">
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_frenchtown_boat">
+                            <img src="./Assets/Images/Frenchtown_boats.png" alt="Boat with the name Marie Elaine" />
+                            <div class="dti_deepDive_caption" style="color: #ffffff;">Fishermen's boats docked in Frenchtown</div>
+                        </div>
+                        
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_Frenchtown_musem">
+                            <img src="./Assets/Images/Frenchtown_museum.png" alt="little yellow building: Frenchtown museum" />
+                            <div class="dti_deepDive_caption" style="color: #ffffff;">Discover the island's colonial history at the museum</div>
+                        </div>
+            
+                        <div class="dti_deepDive_navigation">
+                            <button class="dti_deepDive_navButton">❮</button>
+                            <button class="dti_deepDive_navButton">❯</button>
+                        </div>
+                    </div>
+            
+                    <!-- Right Section -->
+                    <div class="dti_deepDive_right">
+                        <h3 class="dti_deepDive_sectionTitle">PLANNING TIPS</h3>
+                        <div class="dti_deepDive_tip">  just </div>
+                        <div class="dti_deepDive_tip">  have </div>
+                        <div class="dti_deepDive_tip">  fun! </div>
+                        <div class="gradient-border" ></div>
+                    </div>
+                </div>
+            </div>
             
 
             <a href="https://www.airbnb.com/rooms/584075861555690973">

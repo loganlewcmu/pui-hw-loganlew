@@ -59,7 +59,7 @@ li a {
     border: solid orange 4px;
     width: 100%;
     position: relative;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;
     box-sizing: border-box;
     display: flex;
     justify-content: flex-start;
@@ -194,7 +194,7 @@ li a {
     margin-top: 160px;
     transform: translate(-50%, -50%);
     width: 90%;
-    height: 600px;
+    height: fit-content;
     max-width: 1200px;
     max-height: 90%;
     background-color: rgba(89, 149, 165, 0.9);
@@ -294,6 +294,7 @@ li a {
 
 /* Content Section */
 .dti_deepDive_content {
+    height: fit-content;
     border: solid red 2px;
     display: flex;
     gap: 20px;
@@ -305,6 +306,7 @@ li a {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: fit-content;
     gap: 10px;
 }
 
@@ -330,7 +332,8 @@ li a {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    height: fit-content;
+    justify-items: center;
     gap: 10px;
     border: solid red 2px;
 }
@@ -339,7 +342,7 @@ li a {
 .dti_deepDive_visuals {
     position: relative;
     width: 100%;
-    height: 100%;
+    padding-bottom: 70%;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -408,8 +411,9 @@ li a {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: fit-content;
     gap: 10px;
-    padding: 10px;
+    padding: 10px 10px px 10px;
     border-radius: 10px;
     color: white;
 }
@@ -448,10 +452,3 @@ li a {
     border-image-slice: 1;
 }
 
-#dti_deepDive_card_Magens{
-    
-}
-
-#dti_deepDive_card_ferryToSTJ{
-    display: none
-}

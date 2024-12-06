@@ -185,6 +185,7 @@ li a {
 
 /* deep dive cards */
 
+
 /* Deep Dive Card Container */
 .dti_deepDive_card {
     position: absolute;
@@ -208,22 +209,17 @@ li a {
     z-index: 8000;
 }
 
-/* Header Section */
-.dti_deepDive_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 4px;
-}
 
-.dti_deepDive_title {
-    border: solid red 2px;
-    font-size: 34px;
-    font-weight: bold;
-    color: #eaeaeaea;
-    font-style: italic;
+
+/* Header Section */
+/* Header container for navigation buttons and title */
+.dti_deepDive_header {
+    border: solid green 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    text-align: center;
+    position: relative;
 }
 
 .dti_deepDive_closeButton {
@@ -233,11 +229,68 @@ li a {
     cursor: pointer;
     color: #777;
     transition: color 0.3s ease;
+    position: absolute; /* Positions close button independently */
+    right: 10px;
 }
 
 .dti_deepDive_closeButton:hover {
     color: #000;
 }
+
+.dti_deepDive_header_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: solid red 2px
+}
+
+/* Title styling (center aligned) */
+.dti_deepDive_title {
+    border: solid red 2px;
+    font-size: 34px;
+    color: #eaeaeaea;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    width: 550px; /* Keeps title width constrained */
+    word-wrap: break-word;  /* Prevents long words from overflowing */
+    
+}
+
+
+/* Header navigation buttons */
+.dti_deepDive_navHeaderButton {
+    background: none;
+    height: fit-content;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dti_deepDive_navButton {
+    background: none;
+    border: 1px solid #1F5555;
+    color: #1F5555;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dti_deepDive_navHeaderButton:hover {
+    background: #fff;
+    color: #1F5555; /* Dark green color for hover */
+}
+
 
 /* Content Section */
 .dti_deepDive_content {
@@ -248,7 +301,7 @@ li a {
 
 /* Left Section */
 .dti_deepDive_left {
-    border: solid red 2px;
+    border: dotted red 2px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -277,7 +330,9 @@ li a {
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
+    border: solid red 2px;
 }
 
 
@@ -327,6 +382,8 @@ li a {
     display: flex;
     justify-content: center;
     gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .dti_deepDive_navButton {
@@ -347,6 +404,7 @@ li a {
 
 /* Right Section */
 .dti_deepDive_right {
+    border: dotted red 2px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -390,3 +448,10 @@ li a {
     border-image-slice: 1;
 }
 
+#dti_deepDive_card_Magens{
+    
+}
+
+#dti_deepDive_card_ferryToSTJ{
+    display: none
+}

@@ -16,47 +16,103 @@ function hideSidebar(){
     sidebar.style.display = 'none'
 }
 
-/*ex-ing out of day trip inspiration deep dive cards*/
+
+
+/* Deep Dive Card behavior: show on POI click; close on "x" click; toggle between DTIs */
 document.addEventListener("DOMContentLoaded", () => {
-    // Select the close button and the card
-    const closeButton = document.querySelector(".dti_deepDive_closeButton");
-    const deepDiveCard = document.querySelector(".dti_deepDive_card");
+    // Select all POI list items
+    const poiListItems = document.querySelectorAll(".poi-list_item");
+    const deepDiveCards = document.querySelectorAll(".dti_deepDive_card");
 
-    if (closeButton && deepDiveCard) {
-        closeButton.addEventListener("click", () => {
-            // Hide the deep dive card
-            deepDiveCard.style.display = "none";
+    // Show/Hide Deep Dive Cards Based on POI Click
+    poiListItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            const targetCardId = item.getAttribute("data-target");
+            deepDiveCards.forEach((card) => {
+                if (card.id === targetCardId) {
+                    card.style.display = "flex";
+                    // Show first card by default if any card is selected
+                    currentCardIndex = Array.from(deepDiveCards).indexOf(card);
+                    showCard(currentCardIndex);
+                } else {
+                    card.style.display = "none";
+                }
+            });
         });
-    }
-});
+    });
 
-/*clicking between images/captions within the day trip inspiration deep dive cards*/
-document.addEventListener('DOMContentLoaded', () => {
-    const visuals = document.querySelectorAll('.dti_deepDive_visuals');
-    const prevButton = document.querySelectorAll('.dti_deepDive_navButton')[0]; // The ❮ button
-    const nextButton = document.querySelectorAll('.dti_deepDive_navButton')[1]; // The ❯ button
-
-    // Initialize function
-    let currentVisualIndex = 0;
-
-    // Update visual being shown
-    const updateVisuals = () => {
-        visuals.forEach((visual, index) => {
-            visual.style.display = index === currentVisualIndex ? 'block' : 'none';
+    // Close Button on Each Deep Dive Card
+    const closeButtons = document.querySelectorAll(".dti_deepDive_closeButton");
+    closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const card = button.closest(".dti_deepDive_card");
+            card.style.display = "none";
         });
+    });
+
+    // Toggle between deep dive cards using previous/next buttons
+    let currentCardIndex = 0; // Start at the first card
+
+    const showCard = (index) => {
+        deepDiveCards.forEach(card => card.style.display = 'none');
+        deepDiveCards[index].style.display = 'flex'; // Show the current card
     };
 
-    // Create event listeners for buttons
-    prevButton.addEventListener('click', () => {
-        currentVisualIndex = (currentVisualIndex - 1 + visuals.length) % visuals.length;
-        updateVisuals();
+    deepDiveCards.forEach((card, index) => {
+        const prevButton = card.querySelector('.prev-btn');
+        const nextButton = card.querySelector('.next-btn');
+
+        if (prevButton && nextButton) {
+            // Click event for the previous button
+            prevButton.addEventListener('click', () => {
+                currentCardIndex = (currentCardIndex === 0) ? deepDiveCards.length - 1 : currentCardIndex - 1;
+                showCard(currentCardIndex);
+            });
+
+            // Click event for the next button
+            nextButton.addEventListener('click', () => {
+                currentCardIndex = (currentCardIndex === deepDiveCards.length - 1) ? 0 : currentCardIndex + 1;
+                showCard(currentCardIndex);
+            });
+        }
     });
 
-    nextButton.addEventListener('click', () => {
-        currentVisualIndex = (currentVisualIndex + 1) % visuals.length;
+    // Show the initial card
+    showCard(currentCardIndex);
+});
+
+
+
+
+/* navigation between visuals in deep-dive cards */
+document.addEventListener("DOMContentLoaded", () => {
+    const deepDiveCards = document.querySelectorAll(".dti_deepDive_card");
+
+    deepDiveCards.forEach((card) => {
+        const visuals = card.querySelectorAll(".dti_deepDive_visuals");
+        const prevButton = card.querySelector(".dti_deepDive_navButton:first-of-type");
+        const nextButton = card.querySelector(".dti_deepDive_navButton:last-of-type");
+
+        let currentVisualIndex = 0;
+
+        const updateVisuals = () => {
+            visuals.forEach((visual, index) => {
+                visual.style.display = index === currentVisualIndex ? "block" : "none";
+            });
+        };
+
+        // Add navigation functionality
+        prevButton?.addEventListener("click", () => {
+            currentVisualIndex = (currentVisualIndex - 1 + visuals.length) % visuals.length;
+            updateVisuals();
+        });
+
+        nextButton?.addEventListener("click", () => {
+            currentVisualIndex = (currentVisualIndex + 1) % visuals.length;
+            updateVisuals();
+        });
+
+        // Initialize visuals display
         updateVisuals();
     });
-
-    // Show the default visual when page loads
-    updateVisuals();
 });

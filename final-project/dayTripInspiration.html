@@ -83,34 +83,34 @@
 
             <div class="poi-list">
                 <ul class="poi-list_left">
-                    <li class="poi-list_item">
+                    <li class="poi-list_item" data-target="dti_deepDive_card_Magens">
                         <a href="#">
                             <p class="poi-list_item_p" id="poi_li_magens">Visit Magens Bay and eat eat eat</p>
                         </a>
                     </li>
-                    <li class="poi-list_item">
+                    <li class="poi-list_item" data-target="dti_deepDive_card_ferryToSTJ">
                         <a href="#">
                             <p class="poi-list_item_p" id="poi_li_stj" >Take the ferry to St. John</p>
                         </a>
                     </li>
-                    <li class="poi-list_item">
+                    <li class="poi-list_item" data-target="dti_deepDive_card_charterBoat">
                         <a href="#">
                             <p class="poi-list_item_p" id="poi_li_boatCharter">Go on a chartered boat tour</p>
                         </a>
                     </li>
                 </ul>
                 <ul class="poi-list_right">
-                    <li class="poi-list_item">
+                    <li class="poi-list_item" data-target="dti_deepDive_card_farmersMarket">
                         <a href="#">
                             <p class="poi-list_item_p" id="poi_li_farmersMarket">Eat fresh at a local farmer's market</p>
                         </a>
                     </li>
-                    <li class="poi-list_item">
+                    <li class="poi-list_item" data-target="dti_deepDive_card_waterIsland">
                         <a href="#">
                             <p class="poi-list_item_p" id="poi_li_waterIsland">Visit Water Island</p>
                         </a>
                     </li>
-                    <li class="poi-list_item">
+                    <li class="poi-list_item" data-target="dti_deepDive_card_frenchtown">
                         <a href="#">
                             <p class="poi-list_item_p" id="poi_li_frenchtown">Visit the historic Frenchtown</p>
                         </a>
@@ -152,13 +152,19 @@
             </div>
             -->
 
-            <div class="dti_deepDive_card">
+            <div class="dti_deepDive_card" id="dti_deepDive_card_ferryToSTJ">
+                
                 <!-- Header -->
                 <div class="dti_deepDive_header">
-                    <h2 class="dti_deepDive_title">Take the ferry to St John</h2>
+                    <div class="dti_deepDive_header_content">
+                        <button class="dti_deepDive_navHeaderButton prev-btn">❮</button>
+                        <h2 class="dti_deepDive_title">Take the ferry to St John</h2>
+                        <button class="dti_deepDive_navHeaderButton next-btn">❯</button>
+                    </div>
                     <button class="dti_deepDive_closeButton">✖</button>
                 </div>
             
+                <!-- Content -->
                 <div class="dti_deepDive_content">
                     <!-- Left Section -->
                     <div class="dti_deepDive_left">
@@ -195,7 +201,6 @@
                             <button class="dti_deepDive_navButton">❯</button>
                         </div>
                     </div>
-
             
                     <!-- Right Section -->
                     <div class="dti_deepDive_right">
@@ -207,6 +212,63 @@
                     </div>
                 </div>
             </div>
+
+            <div class="dti_deepDive_card" id="dti_deepDive_card_Magens">
+                <!-- Header -->
+                <div class="dti_deepDive_header">
+                    <div class="dti_deepDive_header_content">
+                        <button class="dti_deepDive_navHeaderButton prev-btn">❮</button>
+                        <h2 class="dti_deepDive_title">Visit Magens Bay and eat eat eat</h2>
+                        <button class="dti_deepDive_navHeaderButton next-btn">❯</button>
+                    </div>
+                    <button class="dti_deepDive_closeButton">✖</button>
+                </div>
+            
+                <!-- Content -->
+                <div class="dti_deepDive_content">
+                    <!-- Left Section -->
+                    <div class="dti_deepDive_left">
+                        <h3 class="dti_deepDive_sectionTitle">OVERVIEW</h3>
+                        <p class="dti_deepDive_text_left">
+                            Magens Bay is St. Thomas’ most-loved beach, and for good reason. Whether you need a calm morning swim, an afternoon tan, or an evening swim accompanied by a beautiful sunset view, Magens always delivers.
+                            <br>
+                            <br>
+                            If you want to visit Magens but get off the beaten path, hike the <a href="https://www.alltrails.com/trail/us-virgin-islands/saint-thomas/magens-bay-beach-trail" target="_blank">Magens Bay Beach Trail</a>
+                            <br>
+                            <br>
+                            When you’re done, grab a bite at one of our favorite local restaurants.
+                        </p>
+                    </div>
+                    
+                    <!-- Middle Section -->
+                    <div class="dti_deepDive_middle">
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_magensDayTime">
+                            <img src="./Assets/Images/Magens_Daytime.png" alt="beach shoreline during the day; blue water and blue sky" />
+                            <div class="dti_deepDive_caption" style="color: #222222;">Magens Bay's beautiful shoreline during the day</div>
+                        </div>
+            
+                        <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_magensSunset">
+                            <img src="./Assets/Images/Magens_sunset.png" alt="beach during sunset. there are boats in the bay. the sky is orange and pink" />
+                            <div class="dti_deepDive_caption">Magens Bay's even more beautiful sunset </div>
+                        </div>
+            
+                        <div class="dti_deepDive_navigation">
+                            <button class="dti_deepDive_navButton">❮</button>
+                            <button class="dti_deepDive_navButton">❯</button>
+                        </div>
+                    </div>
+            
+                    <!-- Right Section -->
+                    <div class="dti_deepDive_right">
+                        <h3 class="dti_deepDive_sectionTitle">FOOD RECS NEARBY</h3>
+                        <div class="dti_deepDive_tip"> <a href="https://www.google.com/maps/place/Udder+Delights+Ice+Cream+Parlor/@18.36008,-64.9147837,4103m/data=!3m1!1e3!4m6!3m5!1s0x8c051aa4ff5e2395:0x2510a8083a726bbd!8m2!3d18.36008!4d-64.9147837!16s%2Fg%2F11b66hc8vl?entry=ttu&g_ep=EgoyMDI0MTIwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Udder Delight</a>: Ice creamery with local flavors and ingredients (anything rum-flavored or rum-spiked is delicious).</div>
+                        <div class="dti_deepDive_tip"> <a href="https://www.google.com/maps/place/Brooks+Bar+%26+Restaurant/@18.3562598,-64.9148715,4103m/data=!3m1!1e3!4m6!3m5!1s0x8c051aa39f8af94b:0xa9e133eb4a26b466!8m2!3d18.3562598!4d-64.9148715!16s%2Fg%2F11cltlb9n6?entry=ttu&g_ep=EgoyMDI0MTIwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank"> Brooke’s Bar</a>: Casual indoor-outdoor restaurant serving local staples including fish, stewed meat and veggies, plantains, and more.</div>
+                        <!--<div class="dti_deepDive_tip">Mafolie: Upscale, specializing in seafood with a beautiful view of Charlotte Amalie. Call in advance to reserve.</div> -->
+                        <div class="gradient-border" ></div>
+                    </div>
+                </div>
+            </div>
+
             
 
             <a href="https://www.airbnb.com/rooms/584075861555690973">

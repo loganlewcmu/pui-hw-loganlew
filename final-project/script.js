@@ -16,6 +16,54 @@ function hideSidebar(){
     sidebar.style.display = 'none'
 }
 
+/* hover behavior for point of interest list items */
+document.addEventListener("DOMContentLoaded", () => {
+    const poiListItems = document.querySelectorAll(".poi_list_item");
+
+    poiListItems.forEach((item) => {
+        const markerIds = item.getAttribute("data-target2");
+
+        // Split marker IDs into an array if data-target2 exists
+        const markerElements = markerIds
+            ? markerIds.split(",").map(id => document.getElementById(id.trim()))
+            : [];
+
+        // Get the corresponding card ID for hover behavior
+        const targetCardId = item.getAttribute("data-target3");
+        const targetCard = targetCardId ? document.getElementById(targetCardId) : null;
+
+        // Hover behavior for markers
+        if (markerElements.length > 0) {
+            item.addEventListener("mouseenter", () => {
+                markerElements.forEach(marker => {
+                    if (marker) {
+                        marker.style.backgroundColor = "#1F5555"; // Change the color
+                    }
+                });
+
+                // Show the corresponding card on hover
+                if (targetCard) {
+                    targetCard.style.display = "flex";
+                }
+            });
+
+            item.addEventListener("mouseleave", () => {
+                markerElements.forEach(marker => {
+                    if (marker) {
+                        marker.style.backgroundColor = "transparent"; // Reset the color
+                    }
+                });
+
+                // Hide the card when hover ends
+                if (targetCard) {
+                    targetCard.style.display = "none";
+                }
+            });
+        }
+    });
+});
+
+
 
 
 /* Deep Dive Card behavior: show on POI click; close on "x" click; toggle between DTIs */
@@ -24,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const poiListItems = document.querySelectorAll(".poi-list_item");
     const deepDiveCards = document.querySelectorAll(".dti_deepDive_card");
 
-    // Show/Hide Deep Dive Cards Based on POI Click
+    // Show/Hide Deep Dive Cards Based on POI list item Click
     poiListItems.forEach((item) => {
         item.addEventListener("click", () => {
             const targetCardId = item.getAttribute("data-target");

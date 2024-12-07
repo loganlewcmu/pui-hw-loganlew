@@ -85,7 +85,7 @@ li a {
 }
 /* POI Settings */
 
-.poi-list {
+.poi_list {
     border: solid red 2px;
     display: flex;
     flex-direction: row;
@@ -97,11 +97,11 @@ li a {
     left: 2%;
 }
 
-.poi-list_left, poi-list-right {
+.poi_list_left, poi_list_right {
     border: dotted red 2px;
 }
 
-.poi-marker {
+.poi_marker {
     width: 20px;
     height: 20px;
     background-color: transparent;
@@ -112,7 +112,7 @@ li a {
     z-index: 3000;
 }
 
-.poi-list_item {
+.poi_list_item {
     border: dotted red 2px;
     font-size: 24px;
     padding: 0px;
@@ -125,11 +125,11 @@ li a {
     transition: font-weight 0.3s ease;
 }
 
-.poi-list_item:hover {
+.poi_list_item:hover {
     font-weight: bold;
 }
 
-.poi-list_item_p {
+.poi_list_item_p {
     padding: 10px 4px 10px 4px;
     border: dotted yellow 2px;
     margin: 0px;
@@ -149,7 +149,8 @@ li a {
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 4000;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
 }
 
 .DTI_card_left {

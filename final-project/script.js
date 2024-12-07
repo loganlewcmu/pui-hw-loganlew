@@ -32,6 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
         const targetCardId = item.getAttribute("data-target3");
         const targetCard = targetCardId ? document.getElementById(targetCardId) : null;
 
+        // Hover behavior for showing/hiding cards
+        if (targetCard) {
+            item.addEventListener("mouseenter", () => {
+                targetCard.style.display = "flex";
+            });
+
+            item.addEventListener("mouseleave", () => {
+                targetCard.style.display = "none";
+            });
+
+            // Click behavior to hide the card
+            item.addEventListener("click", (e) => {
+                e.preventDefault(); // Prevent default action (e.g., link navigation)
+                targetCard.style.display = "none";
+            });
+        }
+
         // Hover behavior for markers
         if (markerElements.length > 0) {
             item.addEventListener("mouseenter", () => {
@@ -69,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* Deep Dive Card behavior: show on POI click; close on "x" click; toggle between DTIs */
 document.addEventListener("DOMContentLoaded", () => {
     // Select all POI list items
-    const poiListItems = document.querySelectorAll(".poi-list_item");
+    const poiListItems = document.querySelectorAll(".poi_list_item");
     const deepDiveCards = document.querySelectorAll(".dti_deepDive_card");
 
     // Show/Hide Deep Dive Cards Based on POI list item Click

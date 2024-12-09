@@ -1,51 +1,178 @@
-<div class="dti_deepDive_card" id="dti_deepDive_card_Magens">
-    <!-- Header -->
-    <div class="dti_deepDive_header">
-        <h2 class="dti_deepDive_title">Visit Magens Bay and eat eat eat</h2>
-        <button class="dti_deepDive_closeButton">✖</button>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome to Ritaville – Your Dream Condo at Sapphire Village</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta 
+        name="description" 
+        content="Discover your home away from home at Ritaville located in Sapphire Village Condominiums, St. Thomas USVI" 
+    />
+    <link rel="stylesheet" type="text/css" href="./css/newCss.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dayTripInspiration.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="pageContainer_nonHomepage">
+        <!-- navigation bar section -->
+        <nav class="navHeader_nonHomepage">
+            <h3 class="navHeader_home">HOME</h3>
+            <div class="hideOnMobile">
+                <ul class="navHeader_menu">
+                    <li class="navHeader_menuItem">
+                        <a href="#">
+                            <p class="navHeader_menuItem_text">Condo overview</p>
+                        </a>
+                    </li>
+                    <li class="navHeader_menuItem">
+                        <a href="#">
+                            <p class="navHeader_menuItem_text">Plan your trip</p>
+                        </a>
+                    </li>
+                    <li class="navHeader_menuItem">
+                        <a href="#">
+                            <p class="navHeader_menuItem_text">Welcome guide</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <li class="menu_button" onclick=toggleSidebar()>
+                <a href="#">
+                    <svg id="menu_icon" class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>
+             <!-- responsive / mobile state -->
+            <ul class="nav_sidebar">
+                <li class="navSidebar_menuItem">
+                    <a href="#">
+                        <p class="navSidebar_menuItem_text">Condo overview</p>
+                    </a>
+                </li>
+                <li class="navSidebar_menuItem">
+                    <a href="#">
+                        <p class="navSidebar_menuItem_text">Plan your trip</p>
+                    </a>
+                </li>
+                <li class="navSidebar_menuItem">
+                    <a href="#">
+                        <p class="navSidebar_menuItem_text">Welcome guide</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- main content section -->
+        <div class="contentArea_dayTripInspiration">
+            <div class="responsiveFrame">
+                <h1 class="title_nonHomepage" id="title_dayTripInspiration"> Day trip inspiration</h1>
+                <img src="./Assets/Images/STT_Map_AspectRatio.png" alt="St. Thomas Map" class="responsiveImage" id="STT_Map">
+                <!-- Points of Interest -->
+                <div class="poi" style="top: 10%; left: 10%" id="poi_Magens">
+                    <div class="poi_marker" id="poi_marker_Magens"></div>
+                    <li class="poi_list_item" style="top: 45%; left: 41%;" data-target="dti_deepDive_card_Magens" data-target2="poi_marker_Magens" data-target3="DTI_card_Magens">
+                        <a href="#">
+                            <p class="poi_list_item_p" id="poi_li_magens">Visit Magens Bay and eat eat eat</p>
+                        </a>
+                    </li>
+                </div>
+                <!--<div class="poi_marker" style="top: 68%; left: 66%;" id="poi_marker_ferryToSTJ"></div>-->
+                <!--<div class="poi_marker" style="top: 47%; left: 69%;" id="poi_marker_charterBoat"></div>
+                <div class="poi_marker" style="top: 48%; left: 9%;" id="poi_marker_farmersMarket_1"></div>
+                <div class="poi_marker" style="top: 62%; left: 35%;" id="poi_marker_frenchtown"></div>
+                <div class="poi_marker" style="top: 71%; left: 32%;" id="poi_marker_waterIsland"></div>-->
+
+            
+
+                
+                
+                <!--<li class="poi_list_item" style="top: 65%; left: 67%;" data-target="dti_deepDive_card_ferryToSTJ" data-target2="poi_marker_ferryToSTJ" data-target3="DTI_card_ferryToSTJ">
+                    <a href="#">
+                        <p class="poi_list_item_p" id="poi_li_ferryToSTJ" >Take the ferry to St. John</p>
+                    </a>
+                </li>
+
+                <li class="poi_list_item" style="top: 44%; left: 70%;" data-target="dti_deepDive_card_charterBoat" data-target2="poi_marker_charterBoat" data-target3="DTI_card_charterBoat">
+                    <a href="#">
+                        <p class="poi_list_item_p" id="poi_li_charterBoat">Go on a chartered boat tour</p>
+                    </a>
+                </li>
+
+                <li class="poi_list_item" style="top: 45%; left: 10%;" data-target="dti_deepDive_card_farmersMarket" data-target2="poi_marker_farmersMarket_1,poi_marker_farmersMarket_2" data-target3="DTI_card_farmersMarket">
+                    <a href="#">
+                        <p class="poi_list_item_p" id="poi_li_farmersMarket">Eat fresh at a local farmer's market</p>
+                    </a>
+                </li>
+
+                <li class="poi_list_item" style="top: 68%; left: 33%;" data-target="dti_deepDive_card_waterIsland" data-target2="poi_marker_waterIsland" data-target3="DTI_card_waterIsland">
+                    <a href="#">
+                        <p class="poi_list_item_p" id="poi_li_waterIsland">Visit Water Island</p>
+                    </a>
+                </li>
+
+                <li class="poi_list_item" style="top: 59%; left: 36%;" data-target="dti_deepDive_card_frenchtown" data-target2="poi_marker_frenchtown" data-target3="DTI_card_frenchtown">
+                    <a href="#">
+                        <p class="poi_list_item_p" id="poi_li_frenchtown">Visit the historic Frenchtown</p>
+                    </a>
+                </li>-->
+
+
+            </div>
+
+            <!--poi cards on hover-->
+            <div class="DTI_card_hover"  style="top: 12%; left: 41%;" id="DTI_card_Magens">
+                <img src="./Assets/Images/Magens_sunset.png" alt="Magens Bay Beach at sunset" class="responsiveImage_DTI" id="dti_img_Magens">
+                <div class="text_card" id="text_card_Magens">
+                    Go to Magens Bay then eat eat eat
+                </div>
+            </div>
+
+            <div class="DTI_card_hover" style="top: 30%; left: 67%;" id="DTI_card_ferryToSTJ">
+                <img src="./Assets/Images/STJ_ferry.png" alt="3 young men sitting on a ferry looking at water" class="responsiveImage_DTI" id="dti_img_STJFerry">
+                <div class="text_card" id="text_card_STJFerry">
+                    Take the ferry to St. John
+                </div>
+            </div>
+
+            <div class="DTI_card_hover" style="top: 12%; left: 10%;" id="DTI_card_farmersMarket">
+                <img src="./Assets/Images/FarmersMarket_hero.jpg" alt="farmers market stand with vegetables and produce" class="responsiveImage_DTI" id="dti_img_farmersMarket">
+                <div class="text_card" id="text_card_farmersMarket">
+                    Eat fresh at a local farmer's market
+                </div>
+            </div>
+
+            <div class="DTI_card_hover" style="top: 34%; left: 33%;" id="DTI_card_waterIsland">
+                <img src="./Assets/Images/WaterIsland.jpg" alt="island with Charlotte Amalie and St Thomas coast in the background" class="responsiveImage_DTI" id="dti_img_waterIsland">
+                <div class="text_card" id="text_card_farmersMarket">
+                    Visit Water Island
+                </div>
+            </div>
+
+            <div class="DTI_card_hover" style="top: 26%; left: 36%;" id="DTI_card_frenchtown">
+                <img src="./Assets/Images/Frenchtown_museum.png" alt="little yellow building: Frenchtown museum" class="responsiveImage_DTI" id="dti_img_frenchtown">
+                <div class="text_card" id="text_card_farmersMarket">
+                    Visit the historic Frenchtown
+                </div>
+            </div>
+
+            <div class="DTI_card_hover" style="top: 12%; left: 70%;" id="DTI_card_charterBoat">
+                <img src="./Assets/Images/Charter_SunsetCruise.jpg" alt="sailboat on the water during sunset; sky is orange" class="responsiveImage_DTI" id="dti_img_charterBoat">
+                <div class="text_card" id="text_card_STJFerry">
+                    Go on a chartered boat tour
+                </div>
+            </div>
+
+
+            
+
+            <a href="https://www.airbnb.com/rooms/584075861555690973">
+                <button class="button_bookOnAirbnb">
+                    Book on Airbnb
+                </button>
+            </a>
+        </div>
     </div>
-
-    <div class="dti_deepDive_content">
-        <!-- Left Section -->
-        <div class="dti_deepDive_left">
-            <h3 class="dti_deepDive_sectionTitle">OVERVIEW</h3>
-            <p class="dti_deepDive_text_left">
-                Magens Bay is St. Thomas’ most-loved beach, and for good reason. Whether you need a calm morning swim, an afternoon tan, or an evening swim accompanied by a beautiful sunset view, Magens always delivers.
-                <br>
-                <br>
-                If you want to visit Magens but get off the beaten path, hike the Magens Bay Beach Trail.
-                <br>
-                <br>
-                When you’re done, grab a bite at one of our favorite local restaurants.
-            </p>
-        </div>
-
-        <!-- Middle Section -->
-        <div class="dti_deepDive_middle">
-            <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_magensDayTime">
-                <img src="./Assets/Images/Magens_Daytime.png" alt="beach shoreline during the day; blue water and blue sky" />
-                <div class="dti_deepDive_caption">Magens Bay's beautiful shoreline during the day</div>
-            </div>
-
-            <div class="dti_deepDive_visuals" id="dti_deepDive_visuals_magensSunset">
-                <img src="./Assets/Images/Trunk_Bay.png" alt="beach during sunset. there are boats in the bay. the sky is orange and pink" />
-                <div class="dti_deepDive_caption">Magens Bay's even more beautiful sunset </div>
-            </div>
-
-            <div class="dti_deepDive_navigation">
-                <button class="dti_deepDive_navButton">❮</button>
-                <button class="dti_deepDive_navButton">❯</button>
-            </div>
-        </div>
-
-
-        <!-- Right Section -->
-        <div class="dti_deepDive_right">
-            <h3 class="dti_deepDive_sectionTitle">FOOD RECOMMENDATIONS</h3>
-            <div class="dti_deepDive_tip">Udder Delight: Ice creamery with local flavors and ingredients (anything rum-flavored or rum-spiked is delicious).</div>
-            <div class="dti_deepDive_tip">Brooke’s Bar: Casual indoor-outdoor restaurant serving local staples including fish, stewed meat and veggies, plantains, and more.</div>
-            <div class="dti_deepDive_tip">Mafolie: Upscale, specializing in seafood with a beautiful view of Charlotte Amalie. Call in advance to reserve.</div>
-            <div class="gradient-border" ></div>
-        </div>
-    </div>
-</div>
+</body>
+</html>

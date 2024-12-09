@@ -1,3 +1,19 @@
+/* animation behavior for homepage */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const titleCard = document.querySelector(".titleCard");
+    const addressCard = document.querySelector(".addressCard");
+  
+    // Listen for the `animationend` event on the .titleCard
+    titleCard.addEventListener("animationend", (event) => {
+        if (event.animationName === "fadeIn") {  // Ensures it's the fadeIn animation
+            addressCard.style.animation = "slideInLeft 1s ease-out forwards"; // Trigger the .addressCard animation
+        }
+    });
+});
+
+
+/* sidebar responsive behavior */
 function toggleSidebar() {
 const menuIcon = document.getElementById('menu_icon');
 const sidebar = document.querySelector('.nav_sidebar');
@@ -84,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* Deep Dive Card behavior: show on POI click; close on "x" click; toggle between DTIs */
+
 document.addEventListener("DOMContentLoaded", () => {
     // Select all POI list items
     const poiListItems = document.querySelectorAll(".poi_list_item");
@@ -146,7 +163,14 @@ document.addEventListener("DOMContentLoaded", () => {
     showCard(currentCardIndex);
 });
 
-
+/*Prevent .dti_deepDive_card from being displayed on page load - was erroneously showing before*/
+document.addEventListener("DOMContentLoaded", () => {
+    // Hide all deep dive cards on page load
+    const deepDiveCards = document.querySelectorAll(".dti_deepDive_card");
+    deepDiveCards.forEach(card => {
+        card.style.display = "none";
+    });
+});
 
 
 /* navigation between visuals in deep-dive cards */

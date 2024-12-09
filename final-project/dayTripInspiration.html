@@ -66,97 +66,117 @@
         </nav>
         <!-- main content section -->
         <div class="contentArea_dayTripInspiration">
-            <h1 class="title_nonHomepage" id="title_dayTripInspiration"> Day trip inspiration</h1>
-            <!-- hero image -->
             <div class="responsiveFrame">
-                <img src="./Assets/Images/STT_and_STJ.png" alt="St. Thomas Map" class="responsiveImage" id="STT_Map">
-                <!-- Points of Interest -->
-                <div class="poi_marker" style="top: 48%; left: 40%;" id="poi_marker_Magens"></div>
-                <div class="poi_marker" style="top: 68%; left: 66%;" id="poi_marker_ferryToSTJ"></div>
-                <div class="poi_marker" style="top: 47%; left: 69%;" id="poi_marker_charterBoat"></div>
-                <div class="poi_marker" style="top: 48%; left: 9%;" id="poi_marker_farmersMarket_1"></div>
-                <div class="poi_marker" style="top: 59%; left: 38%;" id="poi_marker_farmersMarket_2"></div>
-                <div class="poi_marker" style="top: 62%; left: 35%;" id="poi_marker_frenchtown"></div>
-                <div class="poi_marker" style="top: 71%; left: 32%;" id="poi_marker_waterIsland"></div>
+                <h1 class="title_nonHomepage" id="title_dayTripInspiration"> Day trip inspiration</h1>
+                <img src="./Assets/Images/STT_Map_AspectRatio.png" alt="St. Thomas Map" class="responsiveImage" id="STT_Map">
+                <div class="container_poi">
+                    <div class="poi" id="poi_Magens">
+                        <div class="poi_wrapper">
+                            <div class="poi_marker" id="poi_marker_Magens"></div>
+                            <li class="poi_list_item" data-target="dti_deepDive_card_Magens" data-target2="poi_marker_Magens" data-target3="DTI_card_Magens">
+                                <a href="#">
+                                    <p class="poi_list_item_p" id="poi_li_magens">Visit Magens Bay and eat eat eat</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="poi" id="poi_ferryToSTJ">
+                        <div class="poi_wrapper_leftOriented" id="poi_wrapper_ferryToSTJ">
+                            <div class="poi_marker" id="poi_marker_ferryToSTJ"></div>
+                            <li class="poi_list_item" data-target="dti_deepDive_card_ferryToSTJ" data-target2="poi_marker_ferryToSTJ" data-target3="DTI_card_ferryToSTJ">
+                                <a href="#">
+                                    <p class="poi_list_item_p" id="poi_li_ferryToSTJ">Take the ferry to St. John</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="poi" id="poi_charterBoat">
+                        <div class="poi_wrapper" id="poi_wrapper_charterBoat">
+                            <div class="poi_marker" id="poi_marker_charterBoat"></div>
+                            <li class="poi_list_item" data-target="dti_deepDive_card_charterBoat" data-target2="poi_marker_charterBoat" data-target3="DTI_card_charterBoat">
+                                <a href="#">
+                                    <p class="poi_list_item_p" id="poi_li_charterBoat">Go on a chartered boat tour</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="poi" id="poi_farmersMarket">
+                        <div class="poi_wrapper" id="poi_wrapper_farmersMarket">
+                            <div class="poi_marker" id="poi_marker_farmersMarket"></div>
+                            <li class="poi_list_item" data-target="dti_deepDive_card_farmersMarket" data-target2="poi_marker_farmersMarket_1,poi_marker_farmersMarket_2" data-target3="DTI_card_farmersMarket">
+                                <a href="#">
+                                    <p class="poi_list_item_p" id="poi_li_farmersMarket">Eat fresh at a local farmer's market</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="poi" id="poi_waterIsland">
+                        <div class="poi_wrapper" id="poi_wrapper_WaterIsland">
+                            <div class="poi_marker" id="poi_marker_waterIsland"></div>
+                            <li class="poi_list_item" data-target="dti_deepDive_card_waterIsland" data-target2="poi_marker_waterIsland" data-target3="DTI_card_waterIsland">
+                                <a href="#">
+                                    <p class="poi_list_item_p" id="poi_li_waterIsland">Visit Water Island</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="poi" id="poi_frenchtown">
+                        <div class="poi_wrapper" id="poi_wrapper_frenchtown">
+                            <div class="poi_marker" id="poi_marker_frenchtown"></div>
+                            <li class="poi_list_item" data-target="dti_deepDive_card_frenchtown" data-target2="poi_marker_frenchtown" data-target3="DTI_card_frenchtown">
+                                <a href="#">
+                                    <p class="poi_list_item_p" id="poi_li_frenchtown">Visit the historic Frenchtown</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
-            <div class="poi_list">
-                <ul class="poi_list_left">
-                    <li class="poi_list_item" data-target="dti_deepDive_card_Magens" data-target2="poi_marker_Magens" data-target3="DTI_card_Magens">
-                        <a href="#">
-                            <p class="poi_list_item_p" id="poi_li_magens">Visit Magens Bay and eat eat eat</p>
-                        </a>
-                    </li>
-                    <li class="poi_list_item" data-target="dti_deepDive_card_ferryToSTJ" data-target2="poi_marker_ferryToSTJ" data-target3="DTI_card_ferryToSTJ">
-                        <a href="#">
-                            <p class="poi_list_item_p" id="poi_li_stj" >Take the ferry to St. John</p>
-                        </a>
-                    </li>
-                    <li class="poi_list_item" data-target="dti_deepDive_card_charterBoat" data-target2="poi_marker_charterBoat" data-target3="DTI_card_charterBoat">
-                        <a href="#">
-                            <p class="poi_list_item_p" id="poi_li_charterBoat">Go on a chartered boat tour</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="poi_list_right">
-                    <li class="poi_list_item" data-target="dti_deepDive_card_farmersMarket" data-target2="poi_marker_farmersMarket_1,poi_marker_farmersMarket_2" data-target3="DTI_card_farmersMarket">
-                        <a href="#">
-                            <p class="poi_list_item_p" id="poi_li_farmersMarket">Eat fresh at a local farmer's market</p>
-                        </a>
-                    </li>
-                    <li class="poi_list_item" data-target="dti_deepDive_card_waterIsland" data-target2="poi_marker_waterIsland" data-target3="DTI_card_waterIsland">
-                        <a href="#">
-                            <p class="poi_list_item_p" id="poi_li_waterIsland">Visit Water Island</p>
-                        </a>
-                    </li>
-                    <li class="poi_list_item" data-target="dti_deepDive_card_frenchtown" data-target2="poi_marker_frenchtown" data-target3="DTI_card_frenchtown">
-                        <a href="#">
-                            <p class="poi_list_item_p" id="poi_li_frenchtown">Visit the historic Frenchtown</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!--right-hand-side cards-->
-            <div class="DTI_card_right" id="DTI_card_Magens">
+            <!--poi cards on hover-->
+            <div class="DTI_card_hover"  style="top: 12%; left: 41%;" id="DTI_card_Magens">
                 <img src="./Assets/Images/Magens_sunset.png" alt="Magens Bay Beach at sunset" class="responsiveImage_DTI" id="dti_img_Magens">
                 <div class="text_card" id="text_card_Magens">
                     Go to Magens Bay then eat eat eat
                 </div>
             </div>
 
-            <div class="DTI_card_right" id="DTI_card_ferryToSTJ">
+            <div class="DTI_card_hover" style="top: 30%; left: 67%;" id="DTI_card_ferryToSTJ">
                 <img src="./Assets/Images/STJ_ferry.png" alt="3 young men sitting on a ferry looking at water" class="responsiveImage_DTI" id="dti_img_STJFerry">
                 <div class="text_card" id="text_card_STJFerry">
                     Take the ferry to St. John
                 </div>
             </div>
 
-            <div class="DTI_card_right" id="DTI_card_farmersMarket">
+            <div class="DTI_card_hover" style="top: 12%; left: 10%;" id="DTI_card_farmersMarket">
                 <img src="./Assets/Images/FarmersMarket_hero.jpg" alt="farmers market stand with vegetables and produce" class="responsiveImage_DTI" id="dti_img_farmersMarket">
                 <div class="text_card" id="text_card_farmersMarket">
                     Eat fresh at a local farmer's market
                 </div>
             </div>
 
-            <div class="DTI_card_right" id="DTI_card_waterIsland">
+            <div class="DTI_card_hover" style="top: 34%; left: 33%;" id="DTI_card_waterIsland">
                 <img src="./Assets/Images/WaterIsland.jpg" alt="island with Charlotte Amalie and St Thomas coast in the background" class="responsiveImage_DTI" id="dti_img_waterIsland">
                 <div class="text_card" id="text_card_farmersMarket">
                     Visit Water Island
                 </div>
             </div>
 
-            <div class="DTI_card_right" id="DTI_card_frenchtown">
+            <div class="DTI_card_hover" style="top: 26%; left: 36%;" id="DTI_card_frenchtown">
                 <img src="./Assets/Images/Frenchtown_museum.png" alt="little yellow building: Frenchtown museum" class="responsiveImage_DTI" id="dti_img_frenchtown">
                 <div class="text_card" id="text_card_farmersMarket">
                     Visit the historic Frenchtown
                 </div>
             </div>
 
-            <!--left-hand-side cards-->
-
-            <div class="DTI_card_left" id="DTI_card_charterBoat">
+            <div class="DTI_card_hover" style="top: 12%; left: 70%;" id="DTI_card_charterBoat">
                 <img src="./Assets/Images/Charter_SunsetCruise.jpg" alt="sailboat on the water during sunset; sky is orange" class="responsiveImage_DTI" id="dti_img_charterBoat">
                 <div class="text_card" id="text_card_STJFerry">
                     Go on a chartered boat tour

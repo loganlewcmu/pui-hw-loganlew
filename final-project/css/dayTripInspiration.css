@@ -1,5 +1,6 @@
 /* list + list item settings */
 
+
 ul {
     list-style: none;
     padding: 0;
@@ -35,7 +36,7 @@ li a {
     position: relative;
     margin: 0 auto; 
     min-height: 90vh; 
-    z-index: 1;
+    z-index: 0;
 }
 
 
@@ -62,6 +63,7 @@ li a {
     justify-content: flex-start;
     align-items: flex-end;
     margin: 0 auto;
+    z-index: 0;
     
 }
 
@@ -94,12 +96,23 @@ li a {
 
 .poi {
     position: absolute; /* Ensure .poi acts as a positioning reference */
+    z-index: 3000;
+}
+
+.poi_wrapper_parent {
+    border: solid green 2px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
 }
 
 .poi_wrapper {
+    border: solid yellow 2px;
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 0;
 }
 
 .poi_wrapper_leftOriented {
@@ -183,18 +196,23 @@ li a {
 
 .DTI_card_hover {
     position: absolute;
-    top: 10%;
-    right: 1%;
     width: 350px;
     aspect-ratio: 16/10;
+    bottom: 100%;
+    left: 0;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.5);
-    z-index: 4000;
+    z-index: 10000;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: none;
 }
+
+.DTI_card_hover: hover {
+    z-index: 10000;
+}
+
 
 
 .DTI_card_hover img, .DTI_card_left img  {
@@ -221,6 +239,9 @@ li a {
     box-sizing: border-box;
 }
 
+#poi_wrapper_frenchtown{
+    z-index: 2000
+}
 
 /* deep dive cards */
 
@@ -228,11 +249,11 @@ li a {
 /* Deep Dive Card Container */
 .dti_deepDive_card {
     position: absolute;
-    top: 46%;
+    top: 0;
     left: 50%;
-    margin-top: 160px;
-    transform: translate(-50%, -50%);
-    width: 90%;
+    margin-top: 30px;
+    transform: translateX(-50%);
+    width: 80%;
     height: fit-content;
     max-width: 1200px;
     max-height: 90%;
@@ -341,12 +362,13 @@ li a {
 
 /* Left Section */
 .dti_deepDive_left {
-    border: dotted red 2px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    height: 100%;
+    max-height: 385px;
     gap: 10px;
+    overflow: hidden;
 }
 
 .dti_deepDive_sectionTitle {
@@ -361,7 +383,12 @@ li a {
     font-size: 20px;
     font-weight: 100;
     margin: 0 0 10px;
+    border: solid rgb(186, 186, 186) 2px;
+    padding: 5px;
     color: #eaeaeaea;
+    overflow-y: auto;  /* Enable vertical scrolling */
+    max-height: 100%; /* Allow it to fill the available height */
+    padding-right: 10px;
 }
 
 
@@ -455,6 +482,16 @@ li a {
     padding: 10px 10px px 10px;
     border-radius: 10px;
     color: white;
+    max-height: 385px; /* Set a maximum height for the left section */
+    gap: 10px;
+    overflow: hidden;
+}
+
+.dti_deepDive_tip_container {
+    border: dotted green 2px;
+    overflow-y: auto;  /* Enable vertical scrolling */
+    max-height: 100%; /* Allow it to fill the available height */
+    padding-right: 10px;
 }
 
 .dti_deepDive_tip {

@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+    <!-- Meta tags for character set, title, and responsiveness -->
     <meta charset="utf-8" />
     <title>Welcome to Ritaville – Your Dream Condo at Sapphire Village</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,43 +11,52 @@
         name="description" 
         content="Discover your home away from home at Ritaville located in Sapphire Village Condominiums, St. Thomas USVI" 
     />
+    <!-- Linking external CSS files -->
     <link rel="stylesheet" type="text/css" href="./css/newCss.css" />
     <link rel="stylesheet" type="text/css" href="./css/dayTripInspiration.css" />
+    <!-- Linking external JS file -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="pageContainer_nonHomepage">
-        <!-- navigation bar section -->
+        
+        <!-- Navigation bar section -->
         <nav class="navHeader_nonHomepage">
-            <h3 class="navHeader_home">HOME</h3>
+            <h3 class="navHeader_home">
+                <a href="index.html">HOME</a>
+            </h3>
+            <!-- Navigation menu for larger screens (hidden on mobile) -->
             <div class="hideOnMobile">
                 <ul class="navHeader_menu">
-                    <li class="navHeader_menuItem">
+                    <li class="navHeader_menuItem" id="navHeader_menuItem_condoOverview">
                         <a href="#">
                             <p class="navHeader_menuItem_text">Condo overview</p>
                         </a>
                     </li>
-                    <li class="navHeader_menuItem">
-                        <a href="#">
+                    <li class="navHeader_menuItem" id="navHeader_menuItem_planYourTrip">
+                        <a href="dayTripInspiration.html">
                             <p class="navHeader_menuItem_text">Plan your trip</p>
                         </a>
                     </li>
-                    <li class="navHeader_menuItem">
+                    <li class="navHeader_menuItem" id="navHeader_menuItem_welcomeGuide">
                         <a href="#">
                             <p class="navHeader_menuItem_text">Welcome guide</p>
                         </a>
                     </li>
                 </ul>
             </div>
-            <li class="menu_button" onclick=toggleSidebar()>
+            
+            <!-- Mobile-responsive menu button -->
+            <li class="menu_button" onclick="toggleSidebar()">
                 <a href="#">
                     <svg id="menu_icon" class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed">
                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
                     </svg>
                 </a>
             </li>
-             <!-- responsive / mobile state -->
+
+            <!-- Sidebar for mobile navigation -->
             <ul class="nav_sidebar">
                 <li class="navSidebar_menuItem">
                     <a href="#">
@@ -64,19 +75,22 @@
                 </li>
             </ul>
         </nav>
-        <!-- main content section -->
+
+        <!-- Main content section -->
         <div class="contentArea_dayTripInspiration">
-            <h1 class="title_nonHomepage" id="title_dayTripInspiration"> Day trip inspiration</h1>
+            <h1 class="title_nonHomepage" id="title_dayTripInspiration">Day trip inspiration</h1>
+
+            <!-- Map and points of interest -->
             <div class="responsiveFrame">
                 <img src="./Assets/Images/STT_Map_AspectRatio.png" alt="St. Thomas Map" class="responsiveImage" id="STT_Map">
+
                 <div class="container_poi">
+                    <!-- Point of Interest: Magens Bay -->
                     <div class="poi" id="poi_Magens">
                         <div class="poi_wrapper_parent">
                             <div class="DTI_card_hover" id="DTI_card_Magens">
                                 <img src="./Assets/Images/Magens_sunset.png" alt="Magens Bay Beach at sunset" class="responsiveImage_DTI" id="dti_img_Magens">
-                                <div class="text_card" id="text_card_Magens">
-                                    Sunset at Magens
-                                </div>
+                                <div class="text_card" id="text_card_Magens">Sunset at Magens</div>
                             </div>
                             <div class="poi_wrapper">
                                 <div class="poi_marker" id="poi_marker_Magens"></div>
@@ -89,13 +103,12 @@
                         </div>
                     </div>
 
+                    <!-- Point of Interest: Ferry to St John -->
                     <div class="poi" id="poi_ferryToSTJ">
                         <div class="poi_wrapper_parent">
                             <div class="DTI_card_hover" id="DTI_card_ferryToSTJ">
                                 <img src="./Assets/Images/STJ_ferry.png" alt="3 young men sitting on a ferry looking at water" class="responsiveImage_DTI" id="dti_img_STJFerry">
-                                <div class="text_card" id="text_card_STJFerry">
-                                    View from the ferry
-                                </div>
+                                <div class="text_card" id="text_card_STJFerry">View from the ferry</div>
                             </div>
                             <div class="poi_wrapper_leftOriented" id="poi_wrapper_ferryToSTJ">
                                 <div class="poi_marker" id="poi_marker_ferryToSTJ"></div>
@@ -106,16 +119,14 @@
                                 </li>
                             </div>
                         </div>
-                        
                     </div>
 
+                    <!-- Additional Points of Interest (Charter Boat, Farmers Market, etc.) -->
                     <div class="poi" id="poi_charterBoat">
                         <div class="poi_wrapper_parent">
-                            <div class="DTI_card_hover" style="top: 100%; left: 0%; z-index: 10000"  id="DTI_card_charterBoat">
-                                <img src="./Assets/Images/Charter_SunsetCruise.jpg" alt="sailboat on the water during sunset; sky is orange" class="responsiveImage_DTI" id="dti_img_charterBoat">
-                                <div class="text_card" id="text_card_STJFerry">
-                                    Go on a chartered boat tour
-                                </div>
+                            <div class="DTI_card_hover" style="top: 100%; left: 0%; z-index: 10000" id="DTI_card_charterBoat">
+                                <img src="./Assets/Images/Charter_SunsetCruise.jpg" alt="sailboat on the water during sunset" class="responsiveImage_DTI" id="dti_img_charterBoat">
+                                <div class="text_card" id="text_card_STJFerry">Go on a chartered boat tour</div>
                             </div>
                             <div class="poi_wrapper" id="poi_wrapper_charterBoat">
                                 <div class="poi_marker" id="poi_marker_charterBoat"></div>
@@ -126,7 +137,6 @@
                                 </li>
                             </div>
                         </div>
-                        
                     </div>
 
                     <div class="poi" id="poi_farmersMarket">
@@ -188,11 +198,16 @@
                         </div>
                         
                     </div>
+
                 </div>
-
-
             </div>
 
+            <!-- End of point of interest section-->
+
+
+        <!-- Deep dive card section: Cards that show additional information about each activity-->
+
+            <!--Deep dive: ferry to St John-->
             <div class="dti_deepDive_card" id="dti_deepDive_card_ferryToSTJ">
                 
                 <!-- Header -->
@@ -256,6 +271,7 @@
                 </div>
             </div>
 
+            <!--Deep dive: Visit Magens Bay-->
             <div class="dti_deepDive_card" id="dti_deepDive_card_Magens">
                 <!-- Header -->
                 <div class="dti_deepDive_header">
@@ -314,6 +330,7 @@
                 </div>
             </div>
 
+            <!--Deep dive: Charter a boat tour-->
             <div class="dti_deepDive_card" id="dti_deepDive_card_charterBoat">
                 <!-- Header -->
                 <div class="dti_deepDive_header">
@@ -369,6 +386,7 @@
                 </div>
             </div>
 
+            <!--Deep dive: Farmers Market -->
             <div class="dti_deepDive_card" id="dti_deepDive_card_farmersMarket">
                 <!-- Header -->
                 <div class="dti_deepDive_header">
@@ -426,6 +444,7 @@
                 </div>
             </div>
 
+            <!--Deep dive: Visit Water Island -->
             <div class="dti_deepDive_card" id="dti_deepDive_card_waterIsland">
                 <!-- Header -->
                 <div class="dti_deepDive_header">
@@ -487,6 +506,7 @@
                 </div>
             </div>
 
+            <!--Deep dive: Visit Frenchtown -->
             <div class="dti_deepDive_card" id="dti_deepDive_card_frenchtown">
                 <!-- Header -->
                 <div class="dti_deepDive_header">
@@ -541,11 +561,13 @@
                     </div>
                 </div>
             </div>
-            
 
+            <!--End of deep dive section -->
+            
+            <!--Button linking to Airbnb listing -->
             <a href="https://www.airbnb.com/rooms/584075861555690973">
                 <button class="button_bookOnAirbnb">
-                    Book on Airbnb
+                    Book on <span>Airbnb</span>
                 </button>
             </a>
         </div>

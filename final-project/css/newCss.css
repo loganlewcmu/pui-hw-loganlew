@@ -1,4 +1,4 @@
-/* global style settings */
+/* ----- Global Style Settings ----- */
 .menu_button,
 .ex_button,
 .navHeader_menu,
@@ -10,8 +10,41 @@
     list-style-type: none; /* Removes bullet points */
 }
 
+/* ----- Navigation Header Styles ----- */
 
-/* Navigation menu_web browser */
+/* General styles for nav links */
+.navHeader_home a,
+.navHeader_menuItem a {
+    color: white; /* Make text white */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Ensure pointer cursor */
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for nav links */
+.navHeader_home a:hover,
+.navHeader_menuItem a:hover {
+    color: #d1f1ff9a; /* Lighter shade on hover */
+    text-decoration: none; /* No underline on hover */
+}
+
+/* Styling for the home navigation */
+.navHeader_home {
+    border: none;
+    align-self: flex-start;
+    flex: 0;
+    flex-shrink: 0;
+    padding: 6px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Hover effect for home navigation */
+.navHeader_home:hover {
+    color: #d1f1ff9a; /* Lighter shade for hover */
+}
+
+/* Main navigation menu */
 .navHeader_homepage, .navHeader_nonHomepage {
     border: none;
     display: flex;
@@ -22,29 +55,16 @@
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 900;
+    z-index: 900; /* Ensure navigation is on top */
 }
 
+/* Non-homepage header with custom background */
 .navHeader_nonHomepage {
     background-color: rgba(33, 127, 148, 0.713);
     backdrop-filter: blur(10px);
 }
 
-.navHeader_home {
-    border: none;
-    align-self: flex-start;
-    flex: 0;
-    flex-shrink: 0;
-    padding: 6px;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.navHeader_home:hover {
-    color: #d1f1ff9a; /* Lighter shade for hover */
-}
-
+/* Styling for the navigation menu container */
 .navHeader_menu {
     border: none;
     display: flex;
@@ -57,6 +77,7 @@
     max-width: 100%;
 }
 
+/* Individual menu item container */
 .navHeader_menuItem {
     border: none;
     display: inline-block;
@@ -64,26 +85,42 @@
     white-space: nowrap;
 }
 
+/* Styling for the menu item text */
 .navHeader_menuItem_text {
-    border: none;
-    color: white;
+    color: white; /* Ensure text is white */
     font-size: 24px;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline */
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s ease; /* Smooth color transition */
+    width: 200px;
+    text-align: center; /* Center-align text if necessary */
 }
 
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .navHeader_menu {
+        gap: 10px; /* Adjust the gap between menu items */
+    }
+    .navHeader_menuItem_text {
+        font-size: 20px;
+        width: 150px;
+    }
+}
+
+/* Hover effect for menu item text */
 .navHeader_menuItem_text:hover {
-    color: #d1f1ff9a;
+    color: #d1f1ff9a; /* Lighter color on hover */
+    text-decoration: none; /* Ensure no underline appears on hover */
 }
 
+/* Mobile menu button (hidden by default) */
 .menu_button {
     border: none;
     display: none;
     z-index: 2000;
 }
 
-/* Navigation menu_Responsive states */
+/* ----- Navigation Sidebar (Mobile) ----- */
 .nav_sidebar {
     border: none;
     display: none;
@@ -102,16 +139,19 @@
     z-index: 1000;
 }
 
+/* Styling for sidebar list items */
 .nav_sidebar li {
     border: none;
     width: 100%;
 }
 
+/* Hover effect for sidebar list items */
 .nav_sidebar li:hover {
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
 }
 
+/* Sidebar menu items */
 .navSidebar_menuItem {
     border: none;
     display: block;
@@ -122,6 +162,7 @@
     cursor: pointer;
 }
 
+/* Styling for sidebar menu item text */
 .navSidebar_menuItem_text {
     border: none;
     padding: 16px 24px;
@@ -133,22 +174,12 @@
     transition: color 0.3s;
 }
 
+/* Hover effect for sidebar menu items */
 .navSidebar_menuItem_text:hover {
     color: #d1f1ff9a;
 }
 
-@media (max-width: 768px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu_button {
-        display: block;
-    }
-}
-
-
-
-/* Booking button */
+/* ----- Booking Button Styles ----- */
 .button_bookOnAirbnb {
     border: none;
     border-radius: 5px;
@@ -161,15 +192,53 @@
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for text color */
     z-index: 3000; /* Ensure it's below the nav_sidebar */
 }
 
-.button__bookOnAirbnb:hover {
+/* Hover effect for booking button */
+.button_bookOnAirbnb:hover {
     background-color: #5b99b0; /* Darker shade for hover */
 }
 
+/* Styling for booking button text */
+.button_bookOnAirbnb span {
+    transition: color 0.3s; /* Smooth transition for the text color */
+}
 
-    
+/* Hover effect for booking button text */
+.button_bookOnAirbnb:hover span {
+    color: #FF5A5F; /* Airbnb's signature color */
+}
 
+/* ----- Animation Settings ----- */
 
+/* Fade-in animation */
+.fade-in {
+    animation: fadeIn 0.5s forwards; /* Fade in over 0.5 seconds */
+}
+
+/* Fade-out animation */
+.fade-out {
+    animation: fadeOut 0.2s forwards; /* Fade out over 0.2 seconds */
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fade-out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

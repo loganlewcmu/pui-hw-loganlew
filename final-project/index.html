@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Metadata for the page -->
     <meta charset="utf-8" />
     <title>Welcome to Ritaville – Your Dream Condo at Sapphire Village</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,41 +10,53 @@
         name="description" 
         content="Discover your home away from home at Ritaville located in Sapphire Village Condominiums, St. Thomas USVI" 
     />
+    
+    <!-- Link to external CSS files -->
     <link rel="stylesheet" type="text/css" href="./css/newCss.css" />
     <link rel="stylesheet" type="text/css" href="./css/homepage.css" />
     
+    <!-- External JavaScript file -->
     <script src="script.js" defer></script>
 
 </head>
 
 <body>
     <div class="pageContainer_homepage">
-        <!-- navigation bar section -->
+        <!-- Navigation bar section -->
         <nav class="navHeader_homepage">
-            <h3 class="navHeader_home">HOME</h3>
-            
+            <!-- Home link in the nav bar -->
+            <h3 class="navHeader_home"> 
+                <a href="index.html">HOME</a> 
+            </h3>
+
+            <!-- Navigation menu for desktop view -->
             <div class="hideOnMobile">
                 <ul class="navHeader_menu">
-                    <li class="navHeader_menuItem">
+                    <!-- Condo Overview menu item -->
+                    <li class="navHeader_menuItem" id="navHeader_menuItem_condoOverview">
                         <a href="#">
                             <p class="navHeader_menuItem_text">Condo overview</p>
                         </a>
                     </li>
-                    <li class="navHeader_menuItem">
-                        <a href="#">
+                    
+                    <!-- Plan Your Trip menu item (with a link to another page) -->
+                    <li class="navHeader_menuItem" id="navHeader_menuItem_planYourTrip">
+                        <a href="dayTripInspiration.html">
                             <p class="navHeader_menuItem_text">Plan your trip</p>
                         </a>
                     </li>
-                    <li class="navHeader_menuItem">
+
+                    <!-- Welcome Guide menu item -->
+                    <li class="navHeader_menuItem" id="navHeader_menuItem_welcomeGuide">
                         <a href="#">
                             <p class="navHeader_menuItem_text">Welcome guide</p>
                         </a>
                     </li>
                 </ul>
             </div>
-            
 
-            <li class="menu_button" onclick=toggleSidebar()>
+            <!-- Menu button for mobile (opens sidebar) -->
+            <li class="menu_button" onclick="toggleSidebar()">
                 <a href="#">
                     <svg id="menu_icon" class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed">
                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
@@ -51,59 +64,56 @@
                 </a>
             </li>
 
-             <!-- responsive / mobile state -->
+            <!-- Sidebar for mobile view -->
             <ul class="nav_sidebar">
-                <!--<div class="ex_button" onclick=hideSidebar()> <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> </a> </div>-->
-                
+                <!-- Condo Overview link in the sidebar -->
                 <li class="navSidebar_menuItem">
                     <a href="#">
                         <p class="navSidebar_menuItem_text">Condo overview</p>
                     </a>
                 </li>
+
+                <!-- Plan Your Trip link in the sidebar -->
                 <li class="navSidebar_menuItem">
                     <a href="#">
                         <p class="navSidebar_menuItem_text">Plan your trip</p>
                     </a>
                 </li>
+
+                <!-- Welcome Guide link in the sidebar -->
                 <li class="navSidebar_menuItem">
                     <a href="#">
                         <p class="navSidebar_menuItem_text">Welcome guide</p>
                     </a>
                 </li>
-                
             </ul>
 
         </nav>
 
-        <!-- main content section -->
+        <!-- Main content section -->
         <div class="contentArea_homepage">
-            <!-- welcome/title -->
-
-            <div class="6rds_homepage" >
+            <!-- Title and welcome section -->
+            <div class="6rds_homepage">
                 <div class="titleCard">
                     <h1 class="title_homepage"> Welcome to Ritaville</h1>
                     <h2 class="subtitle_homepage"> Guest Manual</h2>
                 </div>
 
-                <!-- address info -->
+                <!-- Address info card -->
                 <div class="addressCard">
-                    <h2 class="addressHeader_homepage"> Located at <span>SAPPHIRE VILLAGE <br>
-                                                                        CONDOMINIUMS</span>
-                    </h2>
-                    <h2 class="addressDetails_homepage"> 6700 Sapphire Village, Smith Bay,<br>
-                                                        St. Thomas 00602, USVI
-                    </h2>
+                    <h2 class="addressHeader_homepage"> Located at <span>SAPPHIRE VILLAGE <br> CONDOMINIUMS</span></h2>
+                    <h2 class="addressDetails_homepage"> Sapphire Village, Smith Bay,<br> St. Thomas 00602, USVI</h2>
                 </div>
             </div>
 
-            <!-- book button -->
+            <!-- Button to book on Airbnb -->
             <a href="https://www.airbnb.com/rooms/584075861555690973">
                 <button class="button_bookOnAirbnb">
-                    Book on Airbnb
+                    Book on <span>Airbnb</span>
                 </button>
             </a>
         </div>
     </div>
 
 </body>
-</html>        
+</html>

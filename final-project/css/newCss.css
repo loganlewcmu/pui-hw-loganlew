@@ -29,8 +29,6 @@
 
 /* Styling for the home navigation */
 .navHeader_home {
-    border: none;
-    align-self: flex-start;
     flex: 0;
     flex-shrink: 0;
     padding: 6px;
@@ -45,7 +43,6 @@
 
 /* Main navigation menu */
 .navHeader_homepage, .navHeader_nonHomepage {
-    border: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,12 +62,11 @@
 
 /* Styling for the navigation menu container */
 .navHeader_menu {
-    border: none;
     display: flex;
     justify-content: center;
     gap: 40px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0px;
     flex: 1;
     list-style: none;
     max-width: 100%;
@@ -78,10 +74,10 @@
 
 /* Individual menu item container */
 .navHeader_menuItem {
-    border: none;
     display: inline-block;
     flex-shrink: 0;
     white-space: nowrap;
+    margin: 0px;
 }
 
 /* Styling for the menu item text */

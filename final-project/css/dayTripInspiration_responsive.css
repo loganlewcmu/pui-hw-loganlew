@@ -277,7 +277,7 @@ li a {
     flex-direction: column;
     gap: 0px;
     overflow: hidden;
-    z-index: 8000;
+    z-index: 10000;
 }
 
 
@@ -432,6 +432,8 @@ li a {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: none;
 }
+
+
 
 .dti_deepDive_visuals:first-of-type {
     display: block;

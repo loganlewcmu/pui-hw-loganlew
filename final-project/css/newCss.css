@@ -137,7 +137,7 @@
     color: #d1f1ff9a;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .hideOnMobile {
         display: none;
     }
@@ -146,16 +146,6 @@
     }
 }
 
-@media (max-width: 400px) {
-    .nav_sidebar {
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-    }
-    .menu_button {
-        display: block;
-    }
-}
 
 
 /* Booking button */

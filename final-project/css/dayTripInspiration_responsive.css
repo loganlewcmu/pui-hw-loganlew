@@ -165,11 +165,18 @@ li a {
     border: 2px solid #1F5555;
     border-radius: 5px;
     z-index: 3000;
-    /*display: none; /*responsive change*/
 }
 
-.poi_list_item { /*responsive change*/
-    font-size: 14px; /*responsive change: was 20px*/
+ /* Change font size for tablet size */
+ @media (max-width: 768px) {
+    .poi_marker {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.poi_list_item {
+    font-size: 20px;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -178,6 +185,13 @@ li a {
     font-weight: normal;
     transition: font-weight 0.3s ease;
     z-index: 3000;
+}
+
+ /* Change font size for tablet size */
+@media (max-width: 768px) {
+    .poi_list_item {
+        font-size: 14px;
+    }
 }
 
 
@@ -191,17 +205,6 @@ li a {
     white-space: nowrap; /* Prevent wrapping */
 }
 
-/*responsive location for pois */
-
-.rsp_poi_table_top { /*responsive change*/
-    border: dotted green 2px;
-    z-index: 10000;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    position: absolute;
-    top: 10%
-}
 
 /* daytrip inspiration cards */
 
@@ -298,10 +301,11 @@ li a {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #777;
+    color: #ffffff;
     transition: color 0.3s ease;
     position: absolute; /* Positions close button independently */
-    right: 10px;
+    right: 0px;
+    top: 1px;
 }
 
 .dti_deepDive_closeButton:hover {
@@ -368,9 +372,15 @@ li a {
     height: fit-content;
     border: solid red 2px;
     display: flex;
-    flex-direction: column; /*responsive change*/
+    flex-direction: row;
     gap: 20px;
-    overflow-y: auto; /*responsive change*/
+}
+
+@media (max-width: 768px) {
+    .dti_deepDive_content {
+        flex-direction: column; /* switch orientation */
+        overflow-y: auto; /*enable scrolling*/
+    }
 }
 
 /* Left Section */
@@ -382,7 +392,6 @@ li a {
     max-height: 200px;
     gap: 10px;
     overflow: hidden;
-    order: 2; /*responsive change*/
 }
 
 .dti_deepDive_sectionTitle {
@@ -391,7 +400,16 @@ li a {
     font-weight: bold;
     margin: 0 0 10px;
     color: #eaeaeaea;
-     display: none /*responsive change*/
+}
+
+@media (max-width: 768px) {
+    .dti_deepDive_left {
+        order: 2; /* switch orientation */
+    }
+
+    .dti_deepDive_sectionTitle {
+        display: none
+    }
 }
 
 .dti_deepDive_text_left {
@@ -409,28 +427,37 @@ li a {
 
 /* Middle Section */
 .dti_deepDive_middle {
-    width: 100%; /*responsive change from 50%*/
+    width: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
     height: fit-content;
     justify-items: center;
-    align-items: center; /*responsive change*/
     gap: 10px;
     border: solid red 2px;
-    order: 1; /*responsive change*/
 }
-
 
 .dti_deepDive_visuals {
     position: relative;
-    width: 80%; /*change from 50% */ 
+    width: 50%;
     padding-bottom: 50%;
     height: 100%;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: none;
+}
+
+@media (max-width: 768px) {
+    .dti_deepDive_middle { /*update layout for tablet view*/
+        width: 100%;
+        align-items: center;
+        order: 1
+    }
+    
+    .dti_deepDive_visuals {
+        width: 80%;
+    }
 }
 
 
@@ -458,7 +485,7 @@ li a {
     height: 52px;
     background-color: rgba(255, 255, 255, .1);
     color: white;
-    font-size: 20px; /* responsive change from 24 */
+    font-size: 24px;
     text-align: left;
     padding: 10px;
     backdrop-filter: blur(5px);
@@ -467,11 +494,17 @@ li a {
     z-index: 1
 }
 
-.dti_deepDive_caption_responsive { /*responsive change*/
+.dti_deepDive_caption_responsive {
     top: 0;
     height: 100%;
     background-color: rgba(2, 7, 13, 0.736);
     color: white;
+}
+
+@media (max-width: 768px) {
+    .dti_deepDive_caption, .dti_deepDive_caption_responsive {
+        font-size: 20px; /*update layout for tablet view*/
+    }
 }
 
 .dti_deepDive_navigation {
@@ -511,8 +544,15 @@ li a {
     color: white;
     max-height: 385px; /* Set a maximum height for the left section */
     gap: 10px;
-    display: none; /*responsive change*/
 }
+
+@media (max-width: 768px) {
+    .dti_deepDive_right {
+        display: none; /*update layout for tablet view*/
+    }
+}
+
+
 
 .dti_deepDive_tip_container {
     border: dotted green 2px;

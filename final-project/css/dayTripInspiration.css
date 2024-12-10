@@ -55,8 +55,9 @@ li a {
 
 .responsiveFrame {
     border: solid orange 4px;
+    position: absolute; /*changed for responsive */
+    top: 20%; /*changed for responsive */
     width: 100%;
-    position: relative;
     padding-bottom: 52.25%;
     box-sizing: border-box;
     display: flex;
@@ -100,7 +101,6 @@ li a {
 }
 
 .poi_wrapper_parent {
-    border: solid green 2px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -108,7 +108,6 @@ li a {
 }
 
 .poi_wrapper {
-    border: solid yellow 2px;
     position: relative;
     display: flex;
     align-items: center;
@@ -168,6 +167,14 @@ li a {
     z-index: 3000;
 }
 
+ /* Change font size for tablet size */
+ @media (max-width: 768px) {
+    .poi_marker {
+        width: 14px;
+        height: 14px;
+    }
+}
+
 .poi_list_item {
     font-size: 20px;
     padding: 0px;
@@ -178,6 +185,13 @@ li a {
     font-weight: normal;
     transition: font-weight 0.3s ease;
     z-index: 3000;
+}
+
+ /* Change font size for tablet size */
+@media (max-width: 768px) {
+    .poi_list_item {
+        font-size: 14px;
+    }
 }
 
 
@@ -266,7 +280,7 @@ li a {
     flex-direction: column;
     gap: 0px;
     overflow: hidden;
-    z-index: 8000;
+    z-index: 10000;
 }
 
 
@@ -287,10 +301,11 @@ li a {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #777;
+    color: #ffffff;
     transition: color 0.3s ease;
     position: absolute; /* Positions close button independently */
-    right: 10px;
+    right: 0px;
+    top: 1px;
 }
 
 .dti_deepDive_closeButton:hover {
@@ -357,7 +372,15 @@ li a {
     height: fit-content;
     border: solid red 2px;
     display: flex;
+    flex-direction: row;
     gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .dti_deepDive_content {
+        flex-direction: column; /* switch orientation */
+        overflow-y: auto; /*enable scrolling*/
+    }
 }
 
 /* Left Section */
@@ -366,10 +389,11 @@ li a {
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-height: 385px;
+    max-height: 400px;
     gap: 10px;
     overflow: hidden;
 }
+
 
 .dti_deepDive_sectionTitle {
     font-size: 24px;
@@ -377,6 +401,17 @@ li a {
     font-weight: bold;
     margin: 0 0 10px;
     color: #eaeaeaea;
+}
+
+@media (max-width: 768px) {
+    .dti_deepDive_left {
+        order: 2; /* switch orientation */
+        max-height: 200px;
+    }
+
+    .dti_deepDive_sectionTitle {
+        display: none
+    }
 }
 
 .dti_deepDive_text_left {
@@ -405,16 +440,32 @@ li a {
 }
 
 
+
 .dti_deepDive_visuals {
     position: relative;
     width: 100%;
     padding-bottom: 70%;
-    height: 100;
+    height: 100%;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: none;
 }
+
+@media (max-width: 768px) {
+    .dti_deepDive_middle { /*update layout for tablet view*/
+        width: 100%;
+        align-items: center;
+        order: 1
+    }
+    
+    .dti_deepDive_visuals {
+        width: 80%;
+        padding-bottom: 56%;
+    }
+}
+
+
 
 .dti_deepDive_visuals:first-of-type {
     display: block;
@@ -429,7 +480,7 @@ li a {
     object-fit: cover
 }
 
-.dti_deepDive_caption {
+.dti_deepDive_caption, .dti_deepDive_caption_responsive  {
     border-radius: 0px 0px 15px 15px;
     position: absolute;
     bottom: 0;
@@ -446,6 +497,19 @@ li a {
     box-sizing: border-box;
     overflow: hidden;
     z-index: 1
+}
+
+.dti_deepDive_caption_responsive {
+    top: 0;
+    height: 100%;
+    background-color: rgba(2, 7, 13, 0.736);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .dti_deepDive_caption, .dti_deepDive_caption_responsive {
+        font-size: 20px; /*update layout for tablet view*/
+    }
 }
 
 .dti_deepDive_navigation {
@@ -485,8 +549,15 @@ li a {
     color: white;
     max-height: 385px; /* Set a maximum height for the left section */
     gap: 10px;
-    overflow: hidden;
 }
+
+@media (max-width: 768px) {
+    .dti_deepDive_right {
+        display: none; /*update layout for tablet view*/
+    }
+}
+
+
 
 .dti_deepDive_tip_container {
     border: dotted green 2px;

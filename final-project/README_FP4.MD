@@ -2,6 +2,12 @@
 Site testing:
 
 Key links:
+
+
+FOR WAVE SCREENSHOTS, PLEASE SEE GOOGLE DOCS WRITE-UP LINKED BELOW
+
+
+
 Google docs version of write-up: https://docs.google.com/document/d/1pSUzrGSyfOhEmRNqsnNoEDDd2yJztjr0q2zWG1jiZpI/edit?usp=sharing
 Github repository: https://github.com/loganlewcmu/pui-hw-loganlew
 Website: https://loganlewcmu.github.io/pui-hw-loganlew/final-project/ 

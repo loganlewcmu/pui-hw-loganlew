@@ -10,6 +10,11 @@
     z-index: 0; /* Ensures background stays at the bottom */
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 /* ----- Main Content Section ----- */
 .contentArea_homepage {
     border: none;

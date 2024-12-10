@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 /* list + list item settings */
 
 
@@ -29,7 +34,6 @@ li a {
 
 /* Main content area */
 .contentArea_dayTripInspiration {
-    border: solid red 2px;
     display: flex;
     flex-direction: column;
     padding: 0px 0px;
@@ -42,7 +46,6 @@ li a {
 
 /* Title section */
 .title_nonHomepage {
-    border: dotted red 2px;
     margin: 0;
     padding: 10px 10px;
     color: #1F5555;
@@ -54,9 +57,8 @@ li a {
 /* images */
 
 .responsiveFrame {
-    border: solid orange 4px;
-    position: absolute; /*changed for responsive */
-    top: 20%; /*changed for responsive */
+    position: absolute;
+    top: 20%;
     width: 100%;
     padding-bottom: 52.25%;
     box-sizing: border-box;
@@ -90,13 +92,12 @@ li a {
     width: 100%;
     height: auto;
     object-fit: contain;
-    /*object-fit: contain;*/
 }
 
 /* POI Settings */
 
 .poi {
-    position: absolute; /* Ensure .poi acts as a positioning reference */
+    position: absolute;
     z-index: 3000;
 }
 
@@ -202,7 +203,7 @@ li a {
 .poi_list_item_p {
     padding: 10px 4px 10px 4px;
     margin: 0px;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap;
 }
 
 
@@ -257,7 +258,7 @@ li a {
     z-index: 2000
 }
 
-/* deep dive cards */
+/* Deep Dive card formatting */
 
 
 /* Deep Dive Card Container */
@@ -283,12 +284,8 @@ li a {
     z-index: 10000;
 }
 
-
-
-/* Header Section */
 /* Header container for navigation buttons and title */
 .dti_deepDive_header {
-    border: solid green 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,7 +300,7 @@ li a {
     cursor: pointer;
     color: #ffffff;
     transition: color 0.3s ease;
-    position: absolute; /* Positions close button independently */
+    position: absolute;
     right: 0px;
     top: 1px;
 }
@@ -317,19 +314,17 @@ li a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    border: solid red 2px
 }
 
 /* Title styling (center aligned) */
 .dti_deepDive_title {
-    border: solid red 2px;
     font-size: 34px;
     color: #eaeaeaea;
     font-weight: bold;
     font-style: italic;
     text-align: center;
-    width: 550px; /* Keeps title width constrained */
-    word-wrap: break-word;  /* Prevents long words from overflowing */
+    width: 550px;
+    word-wrap: break-word;
     
 }
 
@@ -363,14 +358,13 @@ li a {
 
 .dti_deepDive_navHeaderButton:hover {
     background: #fff;
-    color: #1F5555; /* Dark green color for hover */
+    color: #1F5555;
 }
 
 
 /* Content Section */
 .dti_deepDive_content {
     height: fit-content;
-    border: solid red 2px;
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -422,7 +416,7 @@ li a {
     padding: 5px;
     color: #eaeaeaea;
     overflow-y: auto;  /* Enable vertical scrolling */
-    max-height: 100%; /* Allow it to fill the available height */
+    max-height: 100%;
     padding-right: 10px;
 }
 
@@ -436,10 +430,7 @@ li a {
     height: fit-content;
     justify-items: center;
     gap: 10px;
-    border: solid red 2px;
 }
-
-
 
 .dti_deepDive_visuals {
     position: relative;
@@ -464,8 +455,6 @@ li a {
         padding-bottom: 56%;
     }
 }
-
-
 
 .dti_deepDive_visuals:first-of-type {
     display: block;
@@ -538,7 +527,6 @@ li a {
 
 /* Right Section */
 .dti_deepDive_right {
-    border: dotted red 2px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -547,7 +535,7 @@ li a {
     padding: 10px 10px px 10px;
     border-radius: 10px;
     color: white;
-    max-height: 385px; /* Set a maximum height for the left section */
+    max-height: 385px;
     gap: 10px;
 }
 
@@ -560,9 +548,8 @@ li a {
 
 
 .dti_deepDive_tip_container {
-    border: dotted green 2px;
     overflow-y: auto;  /* Enable vertical scrolling */
-    max-height: 100%; /* Allow it to fill the available height */
+    max-height: 100%;
     padding-right: 10px;
 }
 
@@ -573,12 +560,9 @@ li a {
     margin: 0 0 10px;
     color: #eaeaeaea;
     background-color: transparent;
-    
-    /* Transparent border for spacing */
     border: 5px solid transparent; 
     border-radius: 16px;
-    
-    /* Gradient applied to the border */
+    /* gradient applied to the border */
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)); 
     border-image-slice: 1;
 }
@@ -590,12 +574,9 @@ li a {
     margin: 0 0 10px;
     color: #eaeaeaea;
     background-color: transparent;
-    
-    /* Transparent border for spacing */
     border: 5px solid transparent; 
     border-radius: 16px;
-    
-    /* Gradient applied to the border */
+    /* gradient applied to the border */
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); 
     border-image-slice: 1;
 }

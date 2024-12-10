@@ -1,8 +1,7 @@
 /* ----- Global Style Settings ----- */
 .menu_button,
 .ex_button,
-.navHeader_menu,
-.nav_sidebar {
+.navHeader_menu {
     border: none;
     display: block;
     margin: 0;
@@ -120,64 +119,6 @@
     z-index: 2000;
 }
 
-/* ----- Navigation Sidebar (Mobile) ----- */
-.nav_sidebar {
-    border: none;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-top: 60px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: fit-content;
-    height: fit-content;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(40px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-/* Styling for sidebar list items */
-.nav_sidebar li {
-    border: none;
-    width: 100%;
-}
-
-/* Hover effect for sidebar list items */
-.nav_sidebar li:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-}
-
-/* Sidebar menu items */
-.navSidebar_menuItem {
-    border: none;
-    display: block;
-    align-self: flex-start;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-/* Styling for sidebar menu item text */
-.navSidebar_menuItem_text {
-    border: none;
-    padding: 16px 24px;
-    margin: 0px;
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-/* Hover effect for sidebar menu items */
-.navSidebar_menuItem_text:hover {
-    color: #d1f1ff9a;
-}
 
 /* ----- Booking Button Styles ----- */
 .button_bookOnAirbnb {
@@ -193,15 +134,11 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s; /* Add transition for text color */
-    z-index: 3000; /* Ensure it's below the nav_sidebar */
+    z-index: 3000;
 }
 
-/* Hover effect for booking button */
-.button_bookOnAirbnb:hover {
-    background-color: #5b99b0; /* Darker shade for hover */
-}
 
-/* Styling for booking button text */
+/* Hover for booking button text */
 .button_bookOnAirbnb span {
     transition: color 0.3s; /* Smooth transition for the text color */
 }

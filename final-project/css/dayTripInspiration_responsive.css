@@ -55,8 +55,9 @@ li a {
 
 .responsiveFrame {
     border: solid orange 4px;
+    position: absolute; /*changed for responsive */
+    top: 20%; /*changed for responsive */
     width: 100%;
-    position: relative;
     padding-bottom: 52.25%;
     box-sizing: border-box;
     display: flex;
@@ -100,7 +101,6 @@ li a {
 }
 
 .poi_wrapper_parent {
-    border: solid green 2px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -108,7 +108,6 @@ li a {
 }
 
 .poi_wrapper {
-    border: solid yellow 2px;
     position: relative;
     display: flex;
     align-items: center;
@@ -166,10 +165,11 @@ li a {
     border: 2px solid #1F5555;
     border-radius: 5px;
     z-index: 3000;
+    /*display: none; /*responsive change*/
 }
 
-.poi_list_item {
-    font-size: 20px;
+.poi_list_item { /*responsive change*/
+    font-size: 14px; /*responsive change: was 20px*/
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -191,6 +191,17 @@ li a {
     white-space: nowrap; /* Prevent wrapping */
 }
 
+/*responsive location for pois */
+
+.rsp_poi_table_top { /*responsive change*/
+    border: dotted green 2px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    top: 10%
+}
 
 /* daytrip inspiration cards */
 
@@ -357,7 +368,9 @@ li a {
     height: fit-content;
     border: solid red 2px;
     display: flex;
+    flex-direction: column; /*responsive change*/
     gap: 20px;
+    overflow-y: auto; /*responsive change*/
 }
 
 /* Left Section */
@@ -366,9 +379,10 @@ li a {
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-height: 385px;
+    max-height: 200px;
     gap: 10px;
     overflow: hidden;
+    order: 2; /*responsive change*/
 }
 
 .dti_deepDive_sectionTitle {
@@ -377,6 +391,7 @@ li a {
     font-weight: bold;
     margin: 0 0 10px;
     color: #eaeaeaea;
+     display: none /*responsive change*/
 }
 
 .dti_deepDive_text_left {
@@ -394,22 +409,24 @@ li a {
 
 /* Middle Section */
 .dti_deepDive_middle {
-    width: 50%;
+    width: 100%; /*responsive change from 50%*/
     text-align: center;
     display: flex;
     flex-direction: column;
     height: fit-content;
     justify-items: center;
+    align-items: center; /*responsive change*/
     gap: 10px;
     border: solid red 2px;
+    order: 1; /*responsive change*/
 }
 
 
 .dti_deepDive_visuals {
     position: relative;
-    width: 100%;
-    padding-bottom: 70%;
-    height: 100;
+    width: 80%; /*change from 50% */ 
+    padding-bottom: 50%;
+    height: 100%;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -429,7 +446,7 @@ li a {
     object-fit: cover
 }
 
-.dti_deepDive_caption {
+.dti_deepDive_caption, .dti_deepDive_caption_responsive  {
     border-radius: 0px 0px 15px 15px;
     position: absolute;
     bottom: 0;
@@ -439,13 +456,20 @@ li a {
     height: 52px;
     background-color: rgba(255, 255, 255, .1);
     color: white;
-    font-size: 24px;
+    font-size: 20px; /* responsive change from 24 */
     text-align: left;
     padding: 10px;
     backdrop-filter: blur(5px);
     box-sizing: border-box;
     overflow: hidden;
     z-index: 1
+}
+
+.dti_deepDive_caption_responsive { /*responsive change*/
+    top: 0;
+    height: 100%;
+    background-color: rgba(2, 7, 13, 0.736);
+    color: white;
 }
 
 .dti_deepDive_navigation {
@@ -485,7 +509,7 @@ li a {
     color: white;
     max-height: 385px; /* Set a maximum height for the left section */
     gap: 10px;
-    overflow: hidden;
+    display: none; /*responsive change*/
 }
 
 .dti_deepDive_tip_container {
